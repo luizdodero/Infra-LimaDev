@@ -1,0 +1,17 @@
+=== Validacao de Backbone ===
+Hosts file: 01_infra_backbone/checklists/hosts.csv
+SSH port: 22022 | HTTPS port: 443 | Timeout: 5s
+Assistente edge port padrao (Openclaw): 18789
+
+NOME               HOST                                 TAILSCALE    SSH        HTTPS     
+------------------ ------------------------------------ ------------ ---------- ----------
+note-limadev; note-dev-lima.tailed51fe.ts.net;100.123.109.53;fd7a:115c:a1e0::2001:6da4; note-limadev; note-dev-lima.tailed51fe.ts.net;100.123.109.53;fd7a:115c:a1e0::2001:6da4; FAIL         FAIL       FAIL      
+vps-assist;vps-assist.tailed51fe.ts.net;100.65.159.1;fd7a:115c:a1e0::e701:9f02; vps-assist;vps-assist.tailed51fe.ts.net;100.65.159.1;fd7a:115c:a1e0::e701:9f02; FAIL         FAIL       FAIL      
+vps-prod;vps-prod.tailed51fe.ts.net;100.118.12.49;fd7a:115c:a1e0::3e3b:c31; vps-prod;vps-prod.tailed51fe.ts.net;100.118.12.49;fd7a:115c:a1e0::3e3b:c31; FAIL         FAIL       FAIL      
+vps-dev;vps-dev.tailed51fe.ts.net;100.120.55.28;fd7a:115c:a1e0::203b:371c; vps-dev;vps-dev.tailed51fe.ts.net;100.120.55.28;fd7a:115c:a1e0::203b:371c; FAIL         FAIL       FAIL      
+
+Assistente edge: SKIP
+
+Hosts avaliados: 4
+Falhas: 12
+Resultado: FAIL

@@ -1,0 +1,7 @@
+[2026-02-23 15:21:05] Iniciando validacao: faster-whisper -> n8n -> openclaw -> n8n -> piper
+[2026-02-23 15:21:05] request_id=voice-e2e-2026-02-23_152105
+[2026-02-23 15:21:05] Disparando webhook de entrada: https://vps-assist.tailed51fe.ts.net/webhook/comando-voz
+[2026-02-23 15:21:05] Resposta webhook: HTTP=200 body={"message":"Workflow was started"}
+[2026-02-23 15:21:09] Conferindo execucoes no n8n e fila Piper
+[2026-02-23 15:21:09] Resultado n8n/piper: {"inbound_success": false, "return_success": false, "inbound_exec_id": null, "return_exec_id": null, "recent": [{"id": 12, "workflowId": "PndQfLZsfDZ7X9YQ", "status": "running", "startedAt": "2026-02-23 18:21:05.324", "stoppedAt": null}], "queue_hit": false}
+[2026-02-23 15:21:10] Falha: etapa n8n inbound nao concluiu com sucesso.

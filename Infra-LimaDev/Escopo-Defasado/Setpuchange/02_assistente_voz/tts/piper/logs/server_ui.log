@@ -1,0 +1,2515 @@
+Tocando WAVE '/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/out/fde84206-0805-4b76-98c3-b8efae79c9d9.wav' : Signed 16 bit Little Endian, Taxa 22050 Hz, Mono
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 56890)
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/socketserver.py", line 318, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 349, in process_request
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.12/socketserver.py", line 761, in __init__
+    self.handle()
+  File "/usr/lib/python3.12/http/server.py", line 436, in handle
+    self.handle_one_request()
+  File "/usr/lib/python3.12/http/server.py", line 424, in handle_one_request
+    method()
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 85, in do_GET
+    self._send(200, {"ok": True, "ts": now_utc_iso()})
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 80, in _send
+    self.wfile.write(body)
+  File "/usr/lib/python3.12/socketserver.py", line 840, in write
+    self._sock.sendall(b)
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 56898)
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/socketserver.py", line 318, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 349, in process_request
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.12/socketserver.py", line 761, in __init__
+    self.handle()
+  File "/usr/lib/python3.12/http/server.py", line 436, in handle
+    self.handle_one_request()
+  File "/usr/lib/python3.12/http/server.py", line 424, in handle_one_request
+    method()
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 85, in do_GET
+    self._send(200, {"ok": True, "ts": now_utc_iso()})
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 80, in _send
+    self.wfile.write(body)
+  File "/usr/lib/python3.12/socketserver.py", line 840, in write
+    self._sock.sendall(b)
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 56904)
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/socketserver.py", line 318, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 349, in process_request
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.12/socketserver.py", line 761, in __init__
+    self.handle()
+  File "/usr/lib/python3.12/http/server.py", line 436, in handle
+    self.handle_one_request()
+  File "/usr/lib/python3.12/http/server.py", line 424, in handle_one_request
+    method()
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 85, in do_GET
+    self._send(200, {"ok": True, "ts": now_utc_iso()})
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 80, in _send
+    self.wfile.write(body)
+  File "/usr/lib/python3.12/socketserver.py", line 840, in write
+    self._sock.sendall(b)
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 56908)
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/socketserver.py", line 318, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 349, in process_request
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.12/socketserver.py", line 761, in __init__
+    self.handle()
+  File "/usr/lib/python3.12/http/server.py", line 436, in handle
+    self.handle_one_request()
+  File "/usr/lib/python3.12/http/server.py", line 424, in handle_one_request
+    method()
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 85, in do_GET
+    self._send(200, {"ok": True, "ts": now_utc_iso()})
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 80, in _send
+    self.wfile.write(body)
+  File "/usr/lib/python3.12/socketserver.py", line 840, in write
+    self._sock.sendall(b)
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 56920)
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/socketserver.py", line 318, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 349, in process_request
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.12/socketserver.py", line 761, in __init__
+    self.handle()
+  File "/usr/lib/python3.12/http/server.py", line 436, in handle
+    self.handle_one_request()
+  File "/usr/lib/python3.12/http/server.py", line 424, in handle_one_request
+    method()
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 85, in do_GET
+    self._send(200, {"ok": True, "ts": now_utc_iso()})
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 80, in _send
+    self.wfile.write(body)
+  File "/usr/lib/python3.12/socketserver.py", line 840, in write
+    self._sock.sendall(b)
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 56930)
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/socketserver.py", line 318, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 349, in process_request
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.12/socketserver.py", line 761, in __init__
+    self.handle()
+  File "/usr/lib/python3.12/http/server.py", line 436, in handle
+    self.handle_one_request()
+  File "/usr/lib/python3.12/http/server.py", line 424, in handle_one_request
+    method()
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 85, in do_GET
+    self._send(200, {"ok": True, "ts": now_utc_iso()})
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 80, in _send
+    self.wfile.write(body)
+  File "/usr/lib/python3.12/socketserver.py", line 840, in write
+    self._sock.sendall(b)
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+Tocando WAVE '/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/out/04e176f2-793b-449a-b373-0fc26e2890b6.wav' : Signed 16 bit Little Endian, Taxa 22050 Hz, Mono
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 39068)
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/socketserver.py", line 318, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 349, in process_request
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.12/socketserver.py", line 761, in __init__
+    self.handle()
+  File "/usr/lib/python3.12/http/server.py", line 436, in handle
+    self.handle_one_request()
+  File "/usr/lib/python3.12/http/server.py", line 424, in handle_one_request
+    method()
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 85, in do_GET
+    self._send(200, {"ok": True, "ts": now_utc_iso()})
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 80, in _send
+    self.wfile.write(body)
+  File "/usr/lib/python3.12/socketserver.py", line 840, in write
+    self._sock.sendall(b)
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 39084)
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/socketserver.py", line 318, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 349, in process_request
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.12/socketserver.py", line 761, in __init__
+    self.handle()
+  File "/usr/lib/python3.12/http/server.py", line 436, in handle
+    self.handle_one_request()
+  File "/usr/lib/python3.12/http/server.py", line 424, in handle_one_request
+    method()
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 85, in do_GET
+    self._send(200, {"ok": True, "ts": now_utc_iso()})
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 80, in _send
+    self.wfile.write(body)
+  File "/usr/lib/python3.12/socketserver.py", line 840, in write
+    self._sock.sendall(b)
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 39100)
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/socketserver.py", line 318, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 349, in process_request
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.12/socketserver.py", line 761, in __init__
+    self.handle()
+  File "/usr/lib/python3.12/http/server.py", line 436, in handle
+    self.handle_one_request()
+  File "/usr/lib/python3.12/http/server.py", line 424, in handle_one_request
+    method()
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 85, in do_GET
+    self._send(200, {"ok": True, "ts": now_utc_iso()})
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 80, in _send
+    self.wfile.write(body)
+  File "/usr/lib/python3.12/socketserver.py", line 840, in write
+    self._sock.sendall(b)
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 39112)
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/socketserver.py", line 318, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 349, in process_request
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.12/socketserver.py", line 761, in __init__
+    self.handle()
+  File "/usr/lib/python3.12/http/server.py", line 436, in handle
+    self.handle_one_request()
+  File "/usr/lib/python3.12/http/server.py", line 424, in handle_one_request
+    method()
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 85, in do_GET
+    self._send(200, {"ok": True, "ts": now_utc_iso()})
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 80, in _send
+    self.wfile.write(body)
+  File "/usr/lib/python3.12/socketserver.py", line 840, in write
+    self._sock.sendall(b)
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 53172)
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/socketserver.py", line 318, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 349, in process_request
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.12/socketserver.py", line 761, in __init__
+    self.handle()
+  File "/usr/lib/python3.12/http/server.py", line 436, in handle
+    self.handle_one_request()
+  File "/usr/lib/python3.12/http/server.py", line 424, in handle_one_request
+    method()
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 85, in do_GET
+    self._send(200, {"ok": True, "ts": now_utc_iso()})
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 80, in _send
+    self.wfile.write(body)
+  File "/usr/lib/python3.12/socketserver.py", line 840, in write
+    self._sock.sendall(b)
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 53186)
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/socketserver.py", line 318, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 349, in process_request
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.12/socketserver.py", line 761, in __init__
+    self.handle()
+  File "/usr/lib/python3.12/http/server.py", line 436, in handle
+    self.handle_one_request()
+  File "/usr/lib/python3.12/http/server.py", line 424, in handle_one_request
+    method()
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 85, in do_GET
+    self._send(200, {"ok": True, "ts": now_utc_iso()})
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 80, in _send
+    self.wfile.write(body)
+  File "/usr/lib/python3.12/socketserver.py", line 840, in write
+    self._sock.sendall(b)
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+Tocando WAVE '/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/out/3463b431-421f-45e4-878d-0b3d65dac4a6.wav' : Signed 16 bit Little Endian, Taxa 22050 Hz, Mono
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 60998)
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/socketserver.py", line 318, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 349, in process_request
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.12/socketserver.py", line 761, in __init__
+    self.handle()
+  File "/usr/lib/python3.12/http/server.py", line 436, in handle
+    self.handle_one_request()
+  File "/usr/lib/python3.12/http/server.py", line 424, in handle_one_request
+    method()
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 85, in do_GET
+    self._send(200, {"ok": True, "ts": now_utc_iso()})
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 80, in _send
+    self.wfile.write(body)
+  File "/usr/lib/python3.12/socketserver.py", line 840, in write
+    self._sock.sendall(b)
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 32778)
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/socketserver.py", line 318, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 349, in process_request
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.12/socketserver.py", line 761, in __init__
+    self.handle()
+  File "/usr/lib/python3.12/http/server.py", line 436, in handle
+    self.handle_one_request()
+  File "/usr/lib/python3.12/http/server.py", line 424, in handle_one_request
+    method()
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 85, in do_GET
+    self._send(200, {"ok": True, "ts": now_utc_iso()})
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 80, in _send
+    self.wfile.write(body)
+  File "/usr/lib/python3.12/socketserver.py", line 840, in write
+    self._sock.sendall(b)
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 32784)
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/socketserver.py", line 318, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 349, in process_request
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.12/socketserver.py", line 761, in __init__
+    self.handle()
+  File "/usr/lib/python3.12/http/server.py", line 436, in handle
+    self.handle_one_request()
+  File "/usr/lib/python3.12/http/server.py", line 424, in handle_one_request
+    method()
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 85, in do_GET
+    self._send(200, {"ok": True, "ts": now_utc_iso()})
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 80, in _send
+    self.wfile.write(body)
+  File "/usr/lib/python3.12/socketserver.py", line 840, in write
+    self._sock.sendall(b)
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 32800)
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/socketserver.py", line 318, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 349, in process_request
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.12/socketserver.py", line 761, in __init__
+    self.handle()
+  File "/usr/lib/python3.12/http/server.py", line 436, in handle
+    self.handle_one_request()
+  File "/usr/lib/python3.12/http/server.py", line 424, in handle_one_request
+    method()
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 85, in do_GET
+    self._send(200, {"ok": True, "ts": now_utc_iso()})
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 80, in _send
+    self.wfile.write(body)
+  File "/usr/lib/python3.12/socketserver.py", line 840, in write
+    self._sock.sendall(b)
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 58550)
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/socketserver.py", line 318, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 349, in process_request
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.12/socketserver.py", line 761, in __init__
+    self.handle()
+  File "/usr/lib/python3.12/http/server.py", line 436, in handle
+    self.handle_one_request()
+  File "/usr/lib/python3.12/http/server.py", line 424, in handle_one_request
+    method()
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 85, in do_GET
+    self._send(200, {"ok": True, "ts": now_utc_iso()})
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 80, in _send
+    self.wfile.write(body)
+  File "/usr/lib/python3.12/socketserver.py", line 840, in write
+    self._sock.sendall(b)
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 58558)
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/socketserver.py", line 318, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 349, in process_request
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.12/socketserver.py", line 761, in __init__
+    self.handle()
+  File "/usr/lib/python3.12/http/server.py", line 436, in handle
+    self.handle_one_request()
+  File "/usr/lib/python3.12/http/server.py", line 424, in handle_one_request
+    method()
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 85, in do_GET
+    self._send(200, {"ok": True, "ts": now_utc_iso()})
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 80, in _send
+    self.wfile.write(body)
+  File "/usr/lib/python3.12/socketserver.py", line 840, in write
+    self._sock.sendall(b)
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+Tocando WAVE '/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/out/ec65aecb-37dc-4fe3-a698-8225f59baff4.wav' : Signed 16 bit Little Endian, Taxa 22050 Hz, Mono
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 46780)
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/socketserver.py", line 318, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 349, in process_request
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.12/socketserver.py", line 761, in __init__
+    self.handle()
+  File "/usr/lib/python3.12/http/server.py", line 436, in handle
+    self.handle_one_request()
+  File "/usr/lib/python3.12/http/server.py", line 424, in handle_one_request
+    method()
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 85, in do_GET
+    self._send(200, {"ok": True, "ts": now_utc_iso()})
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 80, in _send
+    self.wfile.write(body)
+  File "/usr/lib/python3.12/socketserver.py", line 840, in write
+    self._sock.sendall(b)
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 46792)
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/socketserver.py", line 318, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 349, in process_request
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.12/socketserver.py", line 761, in __init__
+    self.handle()
+  File "/usr/lib/python3.12/http/server.py", line 436, in handle
+    self.handle_one_request()
+  File "/usr/lib/python3.12/http/server.py", line 424, in handle_one_request
+    method()
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 85, in do_GET
+    self._send(200, {"ok": True, "ts": now_utc_iso()})
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 80, in _send
+    self.wfile.write(body)
+  File "/usr/lib/python3.12/socketserver.py", line 840, in write
+    self._sock.sendall(b)
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 46804)
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/socketserver.py", line 318, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 349, in process_request
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.12/socketserver.py", line 761, in __init__
+    self.handle()
+  File "/usr/lib/python3.12/http/server.py", line 436, in handle
+    self.handle_one_request()
+  File "/usr/lib/python3.12/http/server.py", line 424, in handle_one_request
+    method()
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 85, in do_GET
+    self._send(200, {"ok": True, "ts": now_utc_iso()})
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 80, in _send
+    self.wfile.write(body)
+  File "/usr/lib/python3.12/socketserver.py", line 840, in write
+    self._sock.sendall(b)
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 46810)
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/socketserver.py", line 318, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 349, in process_request
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.12/socketserver.py", line 761, in __init__
+    self.handle()
+  File "/usr/lib/python3.12/http/server.py", line 436, in handle
+    self.handle_one_request()
+  File "/usr/lib/python3.12/http/server.py", line 424, in handle_one_request
+    method()
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 85, in do_GET
+    self._send(200, {"ok": True, "ts": now_utc_iso()})
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 80, in _send
+    self.wfile.write(body)
+  File "/usr/lib/python3.12/socketserver.py", line 840, in write
+    self._sock.sendall(b)
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 46812)
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/socketserver.py", line 318, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 349, in process_request
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.12/socketserver.py", line 761, in __init__
+    self.handle()
+  File "/usr/lib/python3.12/http/server.py", line 436, in handle
+    self.handle_one_request()
+  File "/usr/lib/python3.12/http/server.py", line 424, in handle_one_request
+    method()
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 85, in do_GET
+    self._send(200, {"ok": True, "ts": now_utc_iso()})
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 80, in _send
+    self.wfile.write(body)
+  File "/usr/lib/python3.12/socketserver.py", line 840, in write
+    self._sock.sendall(b)
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+Tocando WAVE '/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/out/f19caa38-5255-4cf8-8871-ec6a3cbd6ea4.wav' : Signed 16 bit Little Endian, Taxa 22050 Hz, Mono
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 47356)
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/socketserver.py", line 318, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 349, in process_request
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.12/socketserver.py", line 761, in __init__
+    self.handle()
+  File "/usr/lib/python3.12/http/server.py", line 436, in handle
+    self.handle_one_request()
+  File "/usr/lib/python3.12/http/server.py", line 424, in handle_one_request
+    method()
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 85, in do_GET
+    self._send(200, {"ok": True, "ts": now_utc_iso()})
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 80, in _send
+    self.wfile.write(body)
+  File "/usr/lib/python3.12/socketserver.py", line 840, in write
+    self._sock.sendall(b)
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 47368)
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/socketserver.py", line 318, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 349, in process_request
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.12/socketserver.py", line 761, in __init__
+    self.handle()
+  File "/usr/lib/python3.12/http/server.py", line 436, in handle
+    self.handle_one_request()
+  File "/usr/lib/python3.12/http/server.py", line 424, in handle_one_request
+    method()
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 85, in do_GET
+    self._send(200, {"ok": True, "ts": now_utc_iso()})
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 80, in _send
+    self.wfile.write(body)
+  File "/usr/lib/python3.12/socketserver.py", line 840, in write
+    self._sock.sendall(b)
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 47382)
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/socketserver.py", line 318, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 349, in process_request
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.12/socketserver.py", line 761, in __init__
+    self.handle()
+  File "/usr/lib/python3.12/http/server.py", line 436, in handle
+    self.handle_one_request()
+  File "/usr/lib/python3.12/http/server.py", line 424, in handle_one_request
+    method()
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 85, in do_GET
+    self._send(200, {"ok": True, "ts": now_utc_iso()})
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 80, in _send
+    self.wfile.write(body)
+  File "/usr/lib/python3.12/socketserver.py", line 840, in write
+    self._sock.sendall(b)
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 47396)
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/socketserver.py", line 318, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 349, in process_request
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.12/socketserver.py", line 761, in __init__
+    self.handle()
+  File "/usr/lib/python3.12/http/server.py", line 436, in handle
+    self.handle_one_request()
+  File "/usr/lib/python3.12/http/server.py", line 424, in handle_one_request
+    method()
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 85, in do_GET
+    self._send(200, {"ok": True, "ts": now_utc_iso()})
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 80, in _send
+    self.wfile.write(body)
+  File "/usr/lib/python3.12/socketserver.py", line 840, in write
+    self._sock.sendall(b)
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 47408)
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/socketserver.py", line 318, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 349, in process_request
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.12/socketserver.py", line 761, in __init__
+    self.handle()
+  File "/usr/lib/python3.12/http/server.py", line 436, in handle
+    self.handle_one_request()
+  File "/usr/lib/python3.12/http/server.py", line 424, in handle_one_request
+    method()
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 85, in do_GET
+    self._send(200, {"ok": True, "ts": now_utc_iso()})
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 80, in _send
+    self.wfile.write(body)
+  File "/usr/lib/python3.12/socketserver.py", line 840, in write
+    self._sock.sendall(b)
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 47418)
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/socketserver.py", line 318, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 349, in process_request
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.12/socketserver.py", line 761, in __init__
+    self.handle()
+  File "/usr/lib/python3.12/http/server.py", line 436, in handle
+    self.handle_one_request()
+  File "/usr/lib/python3.12/http/server.py", line 424, in handle_one_request
+    method()
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 85, in do_GET
+    self._send(200, {"ok": True, "ts": now_utc_iso()})
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 80, in _send
+    self.wfile.write(body)
+  File "/usr/lib/python3.12/socketserver.py", line 840, in write
+    self._sock.sendall(b)
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+Tocando WAVE '/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/out/c01aefd4-ead8-4319-bc99-f096466d32e9.wav' : Signed 16 bit Little Endian, Taxa 22050 Hz, Mono
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 38636)
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/socketserver.py", line 318, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 349, in process_request
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.12/socketserver.py", line 761, in __init__
+    self.handle()
+  File "/usr/lib/python3.12/http/server.py", line 436, in handle
+    self.handle_one_request()
+  File "/usr/lib/python3.12/http/server.py", line 424, in handle_one_request
+    method()
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 85, in do_GET
+    self._send(200, {"ok": True, "ts": now_utc_iso()})
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 80, in _send
+    self.wfile.write(body)
+  File "/usr/lib/python3.12/socketserver.py", line 840, in write
+    self._sock.sendall(b)
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 38648)
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/socketserver.py", line 318, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 349, in process_request
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.12/socketserver.py", line 761, in __init__
+    self.handle()
+  File "/usr/lib/python3.12/http/server.py", line 436, in handle
+    self.handle_one_request()
+  File "/usr/lib/python3.12/http/server.py", line 424, in handle_one_request
+    method()
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 85, in do_GET
+    self._send(200, {"ok": True, "ts": now_utc_iso()})
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 80, in _send
+    self.wfile.write(body)
+  File "/usr/lib/python3.12/socketserver.py", line 840, in write
+    self._sock.sendall(b)
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 38652)
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/socketserver.py", line 318, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 349, in process_request
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.12/socketserver.py", line 761, in __init__
+    self.handle()
+  File "/usr/lib/python3.12/http/server.py", line 436, in handle
+    self.handle_one_request()
+  File "/usr/lib/python3.12/http/server.py", line 424, in handle_one_request
+    method()
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 85, in do_GET
+    self._send(200, {"ok": True, "ts": now_utc_iso()})
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 80, in _send
+    self.wfile.write(body)
+  File "/usr/lib/python3.12/socketserver.py", line 840, in write
+    self._sock.sendall(b)
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 38656)
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/socketserver.py", line 318, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 349, in process_request
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.12/socketserver.py", line 761, in __init__
+    self.handle()
+  File "/usr/lib/python3.12/http/server.py", line 436, in handle
+    self.handle_one_request()
+  File "/usr/lib/python3.12/http/server.py", line 424, in handle_one_request
+    method()
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 85, in do_GET
+    self._send(200, {"ok": True, "ts": now_utc_iso()})
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 80, in _send
+    self.wfile.write(body)
+  File "/usr/lib/python3.12/socketserver.py", line 840, in write
+    self._sock.sendall(b)
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 38668)
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/socketserver.py", line 318, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 349, in process_request
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.12/socketserver.py", line 761, in __init__
+    self.handle()
+  File "/usr/lib/python3.12/http/server.py", line 436, in handle
+    self.handle_one_request()
+  File "/usr/lib/python3.12/http/server.py", line 424, in handle_one_request
+    method()
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 85, in do_GET
+    self._send(200, {"ok": True, "ts": now_utc_iso()})
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 80, in _send
+    self.wfile.write(body)
+  File "/usr/lib/python3.12/socketserver.py", line 840, in write
+    self._sock.sendall(b)
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 38682)
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/socketserver.py", line 318, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 349, in process_request
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.12/socketserver.py", line 761, in __init__
+    self.handle()
+  File "/usr/lib/python3.12/http/server.py", line 436, in handle
+    self.handle_one_request()
+  File "/usr/lib/python3.12/http/server.py", line 424, in handle_one_request
+    method()
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 85, in do_GET
+    self._send(200, {"ok": True, "ts": now_utc_iso()})
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 80, in _send
+    self.wfile.write(body)
+  File "/usr/lib/python3.12/socketserver.py", line 840, in write
+    self._sock.sendall(b)
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+Tocando WAVE '/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/out/3ec7af99-d80e-41a2-b637-99648d263ea3.wav' : Signed 16 bit Little Endian, Taxa 22050 Hz, Mono
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 41796)
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/socketserver.py", line 318, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 349, in process_request
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.12/socketserver.py", line 761, in __init__
+    self.handle()
+  File "/usr/lib/python3.12/http/server.py", line 436, in handle
+    self.handle_one_request()
+  File "/usr/lib/python3.12/http/server.py", line 424, in handle_one_request
+    method()
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 85, in do_GET
+    self._send(200, {"ok": True, "ts": now_utc_iso()})
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 80, in _send
+    self.wfile.write(body)
+  File "/usr/lib/python3.12/socketserver.py", line 840, in write
+    self._sock.sendall(b)
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 41800)
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/socketserver.py", line 318, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 349, in process_request
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.12/socketserver.py", line 761, in __init__
+    self.handle()
+  File "/usr/lib/python3.12/http/server.py", line 436, in handle
+    self.handle_one_request()
+  File "/usr/lib/python3.12/http/server.py", line 424, in handle_one_request
+    method()
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 85, in do_GET
+    self._send(200, {"ok": True, "ts": now_utc_iso()})
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 80, in _send
+    self.wfile.write(body)
+  File "/usr/lib/python3.12/socketserver.py", line 840, in write
+    self._sock.sendall(b)
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 41802)
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/socketserver.py", line 318, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 349, in process_request
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.12/socketserver.py", line 761, in __init__
+    self.handle()
+  File "/usr/lib/python3.12/http/server.py", line 436, in handle
+    self.handle_one_request()
+  File "/usr/lib/python3.12/http/server.py", line 424, in handle_one_request
+    method()
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 85, in do_GET
+    self._send(200, {"ok": True, "ts": now_utc_iso()})
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 80, in _send
+    self.wfile.write(body)
+  File "/usr/lib/python3.12/socketserver.py", line 840, in write
+    self._sock.sendall(b)
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 41812)
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/socketserver.py", line 318, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 349, in process_request
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.12/socketserver.py", line 761, in __init__
+    self.handle()
+  File "/usr/lib/python3.12/http/server.py", line 436, in handle
+    self.handle_one_request()
+  File "/usr/lib/python3.12/http/server.py", line 424, in handle_one_request
+    method()
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 85, in do_GET
+    self._send(200, {"ok": True, "ts": now_utc_iso()})
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 80, in _send
+    self.wfile.write(body)
+  File "/usr/lib/python3.12/socketserver.py", line 840, in write
+    self._sock.sendall(b)
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 39984)
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/socketserver.py", line 318, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 349, in process_request
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.12/socketserver.py", line 761, in __init__
+    self.handle()
+  File "/usr/lib/python3.12/http/server.py", line 436, in handle
+    self.handle_one_request()
+  File "/usr/lib/python3.12/http/server.py", line 424, in handle_one_request
+    method()
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 85, in do_GET
+    self._send(200, {"ok": True, "ts": now_utc_iso()})
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 80, in _send
+    self.wfile.write(body)
+  File "/usr/lib/python3.12/socketserver.py", line 840, in write
+    self._sock.sendall(b)
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 39990)
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/socketserver.py", line 318, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 349, in process_request
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.12/socketserver.py", line 761, in __init__
+    self.handle()
+  File "/usr/lib/python3.12/http/server.py", line 436, in handle
+    self.handle_one_request()
+  File "/usr/lib/python3.12/http/server.py", line 424, in handle_one_request
+    method()
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 85, in do_GET
+    self._send(200, {"ok": True, "ts": now_utc_iso()})
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 80, in _send
+    self.wfile.write(body)
+  File "/usr/lib/python3.12/socketserver.py", line 840, in write
+    self._sock.sendall(b)
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+Tocando WAVE '/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/out/646af4ac-95a5-4aeb-83d9-2e2783e04360.wav' : Signed 16 bit Little Endian, Taxa 22050 Hz, Mono
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 40046)
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/socketserver.py", line 318, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 349, in process_request
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.12/socketserver.py", line 761, in __init__
+    self.handle()
+  File "/usr/lib/python3.12/http/server.py", line 436, in handle
+    self.handle_one_request()
+  File "/usr/lib/python3.12/http/server.py", line 424, in handle_one_request
+    method()
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 85, in do_GET
+    self._send(200, {"ok": True, "ts": now_utc_iso()})
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 80, in _send
+    self.wfile.write(body)
+  File "/usr/lib/python3.12/socketserver.py", line 840, in write
+    self._sock.sendall(b)
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 50816)
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/socketserver.py", line 318, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 349, in process_request
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.12/socketserver.py", line 761, in __init__
+    self.handle()
+  File "/usr/lib/python3.12/http/server.py", line 436, in handle
+    self.handle_one_request()
+  File "/usr/lib/python3.12/http/server.py", line 424, in handle_one_request
+    method()
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 85, in do_GET
+    self._send(200, {"ok": True, "ts": now_utc_iso()})
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 80, in _send
+    self.wfile.write(body)
+  File "/usr/lib/python3.12/socketserver.py", line 840, in write
+    self._sock.sendall(b)
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+Tocando WAVE '/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/out/23c91c32-920f-488d-a272-144eef7891c9.wav' : Signed 16 bit Little Endian, Taxa 22050 Hz, Mono
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 50826)
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/socketserver.py", line 318, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 349, in process_request
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.12/socketserver.py", line 761, in __init__
+    self.handle()
+  File "/usr/lib/python3.12/http/server.py", line 436, in handle
+    self.handle_one_request()
+  File "/usr/lib/python3.12/http/server.py", line 424, in handle_one_request
+    method()
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 85, in do_GET
+    self._send(200, {"ok": True, "ts": now_utc_iso()})
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 80, in _send
+    self.wfile.write(body)
+  File "/usr/lib/python3.12/socketserver.py", line 840, in write
+    self._sock.sendall(b)
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 50834)
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/socketserver.py", line 318, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 349, in process_request
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.12/socketserver.py", line 761, in __init__
+    self.handle()
+  File "/usr/lib/python3.12/http/server.py", line 436, in handle
+    self.handle_one_request()
+  File "/usr/lib/python3.12/http/server.py", line 424, in handle_one_request
+    method()
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 85, in do_GET
+    self._send(200, {"ok": True, "ts": now_utc_iso()})
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 80, in _send
+    self.wfile.write(body)
+  File "/usr/lib/python3.12/socketserver.py", line 840, in write
+    self._sock.sendall(b)
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 50842)
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/socketserver.py", line 318, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 349, in process_request
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.12/socketserver.py", line 761, in __init__
+    self.handle()
+  File "/usr/lib/python3.12/http/server.py", line 436, in handle
+    self.handle_one_request()
+  File "/usr/lib/python3.12/http/server.py", line 424, in handle_one_request
+    method()
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 85, in do_GET
+    self._send(200, {"ok": True, "ts": now_utc_iso()})
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 80, in _send
+    self.wfile.write(body)
+  File "/usr/lib/python3.12/socketserver.py", line 840, in write
+    self._sock.sendall(b)
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 32820)
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/socketserver.py", line 318, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 349, in process_request
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.12/socketserver.py", line 761, in __init__
+    self.handle()
+  File "/usr/lib/python3.12/http/server.py", line 436, in handle
+    self.handle_one_request()
+  File "/usr/lib/python3.12/http/server.py", line 424, in handle_one_request
+    method()
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 85, in do_GET
+    self._send(200, {"ok": True, "ts": now_utc_iso()})
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 80, in _send
+    self.wfile.write(body)
+  File "/usr/lib/python3.12/socketserver.py", line 840, in write
+    self._sock.sendall(b)
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 32832)
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/socketserver.py", line 318, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 349, in process_request
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.12/socketserver.py", line 761, in __init__
+    self.handle()
+  File "/usr/lib/python3.12/http/server.py", line 436, in handle
+    self.handle_one_request()
+  File "/usr/lib/python3.12/http/server.py", line 424, in handle_one_request
+    method()
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 85, in do_GET
+    self._send(200, {"ok": True, "ts": now_utc_iso()})
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 80, in _send
+    self.wfile.write(body)
+  File "/usr/lib/python3.12/socketserver.py", line 840, in write
+    self._sock.sendall(b)
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 32842)
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/socketserver.py", line 318, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 349, in process_request
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.12/socketserver.py", line 761, in __init__
+    self.handle()
+  File "/usr/lib/python3.12/http/server.py", line 436, in handle
+    self.handle_one_request()
+  File "/usr/lib/python3.12/http/server.py", line 424, in handle_one_request
+    method()
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 85, in do_GET
+    self._send(200, {"ok": True, "ts": now_utc_iso()})
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 80, in _send
+    self.wfile.write(body)
+  File "/usr/lib/python3.12/socketserver.py", line 840, in write
+    self._sock.sendall(b)
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+Tocando WAVE '/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/out/707c14b0-5514-4dd3-81f2-daf31af30391.wav' : Signed 16 bit Little Endian, Taxa 22050 Hz, Mono
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 44564)
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/socketserver.py", line 318, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 349, in process_request
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.12/socketserver.py", line 761, in __init__
+    self.handle()
+  File "/usr/lib/python3.12/http/server.py", line 436, in handle
+    self.handle_one_request()
+  File "/usr/lib/python3.12/http/server.py", line 424, in handle_one_request
+    method()
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 85, in do_GET
+    self._send(200, {"ok": True, "ts": now_utc_iso()})
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 80, in _send
+    self.wfile.write(body)
+  File "/usr/lib/python3.12/socketserver.py", line 840, in write
+    self._sock.sendall(b)
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 44570)
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/socketserver.py", line 318, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 349, in process_request
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.12/socketserver.py", line 761, in __init__
+    self.handle()
+  File "/usr/lib/python3.12/http/server.py", line 436, in handle
+    self.handle_one_request()
+  File "/usr/lib/python3.12/http/server.py", line 424, in handle_one_request
+    method()
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 85, in do_GET
+    self._send(200, {"ok": True, "ts": now_utc_iso()})
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 80, in _send
+    self.wfile.write(body)
+  File "/usr/lib/python3.12/socketserver.py", line 840, in write
+    self._sock.sendall(b)
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 44574)
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/socketserver.py", line 318, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 349, in process_request
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.12/socketserver.py", line 761, in __init__
+    self.handle()
+  File "/usr/lib/python3.12/http/server.py", line 436, in handle
+    self.handle_one_request()
+  File "/usr/lib/python3.12/http/server.py", line 424, in handle_one_request
+    method()
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 85, in do_GET
+    self._send(200, {"ok": True, "ts": now_utc_iso()})
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 80, in _send
+    self.wfile.write(body)
+  File "/usr/lib/python3.12/socketserver.py", line 840, in write
+    self._sock.sendall(b)
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 44590)
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/socketserver.py", line 318, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 349, in process_request
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.12/socketserver.py", line 761, in __init__
+    self.handle()
+  File "/usr/lib/python3.12/http/server.py", line 436, in handle
+    self.handle_one_request()
+  File "/usr/lib/python3.12/http/server.py", line 424, in handle_one_request
+    method()
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 85, in do_GET
+    self._send(200, {"ok": True, "ts": now_utc_iso()})
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 80, in _send
+    self.wfile.write(body)
+  File "/usr/lib/python3.12/socketserver.py", line 840, in write
+    self._sock.sendall(b)
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 44598)
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/socketserver.py", line 318, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 349, in process_request
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.12/socketserver.py", line 761, in __init__
+    self.handle()
+  File "/usr/lib/python3.12/http/server.py", line 436, in handle
+    self.handle_one_request()
+  File "/usr/lib/python3.12/http/server.py", line 424, in handle_one_request
+    method()
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 85, in do_GET
+    self._send(200, {"ok": True, "ts": now_utc_iso()})
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 80, in _send
+    self.wfile.write(body)
+  File "/usr/lib/python3.12/socketserver.py", line 840, in write
+    self._sock.sendall(b)
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 44606)
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/socketserver.py", line 318, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 349, in process_request
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.12/socketserver.py", line 761, in __init__
+    self.handle()
+  File "/usr/lib/python3.12/http/server.py", line 436, in handle
+    self.handle_one_request()
+  File "/usr/lib/python3.12/http/server.py", line 424, in handle_one_request
+    method()
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 85, in do_GET
+    self._send(200, {"ok": True, "ts": now_utc_iso()})
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 80, in _send
+    self.wfile.write(body)
+  File "/usr/lib/python3.12/socketserver.py", line 840, in write
+    self._sock.sendall(b)
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+Tocando WAVE '/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/out/6bb99506-17f8-4cf1-9db6-e162880b7e40.wav' : Signed 16 bit Little Endian, Taxa 22050 Hz, Mono
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 48502)
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/socketserver.py", line 318, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 349, in process_request
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.12/socketserver.py", line 761, in __init__
+    self.handle()
+  File "/usr/lib/python3.12/http/server.py", line 436, in handle
+    self.handle_one_request()
+  File "/usr/lib/python3.12/http/server.py", line 424, in handle_one_request
+    method()
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 85, in do_GET
+    self._send(200, {"ok": True, "ts": now_utc_iso()})
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 80, in _send
+    self.wfile.write(body)
+  File "/usr/lib/python3.12/socketserver.py", line 840, in write
+    self._sock.sendall(b)
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 48514)
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/socketserver.py", line 318, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 349, in process_request
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.12/socketserver.py", line 761, in __init__
+    self.handle()
+  File "/usr/lib/python3.12/http/server.py", line 436, in handle
+    self.handle_one_request()
+  File "/usr/lib/python3.12/http/server.py", line 424, in handle_one_request
+    method()
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 85, in do_GET
+    self._send(200, {"ok": True, "ts": now_utc_iso()})
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 80, in _send
+    self.wfile.write(body)
+  File "/usr/lib/python3.12/socketserver.py", line 840, in write
+    self._sock.sendall(b)
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 48524)
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/socketserver.py", line 318, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 349, in process_request
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.12/socketserver.py", line 761, in __init__
+    self.handle()
+  File "/usr/lib/python3.12/http/server.py", line 436, in handle
+    self.handle_one_request()
+  File "/usr/lib/python3.12/http/server.py", line 424, in handle_one_request
+    method()
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 85, in do_GET
+    self._send(200, {"ok": True, "ts": now_utc_iso()})
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 80, in _send
+    self.wfile.write(body)
+  File "/usr/lib/python3.12/socketserver.py", line 840, in write
+    self._sock.sendall(b)
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 48536)
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/socketserver.py", line 318, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 349, in process_request
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.12/socketserver.py", line 761, in __init__
+    self.handle()
+  File "/usr/lib/python3.12/http/server.py", line 436, in handle
+    self.handle_one_request()
+  File "/usr/lib/python3.12/http/server.py", line 424, in handle_one_request
+    method()
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 85, in do_GET
+    self._send(200, {"ok": True, "ts": now_utc_iso()})
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 80, in _send
+    self.wfile.write(body)
+  File "/usr/lib/python3.12/socketserver.py", line 840, in write
+    self._sock.sendall(b)
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 45500)
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/socketserver.py", line 318, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 349, in process_request
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.12/socketserver.py", line 761, in __init__
+    self.handle()
+  File "/usr/lib/python3.12/http/server.py", line 436, in handle
+    self.handle_one_request()
+  File "/usr/lib/python3.12/http/server.py", line 424, in handle_one_request
+    method()
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 85, in do_GET
+    self._send(200, {"ok": True, "ts": now_utc_iso()})
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 80, in _send
+    self.wfile.write(body)
+  File "/usr/lib/python3.12/socketserver.py", line 840, in write
+    self._sock.sendall(b)
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 45504)
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/socketserver.py", line 318, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 349, in process_request
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.12/socketserver.py", line 761, in __init__
+    self.handle()
+  File "/usr/lib/python3.12/http/server.py", line 436, in handle
+    self.handle_one_request()
+  File "/usr/lib/python3.12/http/server.py", line 424, in handle_one_request
+    method()
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 85, in do_GET
+    self._send(200, {"ok": True, "ts": now_utc_iso()})
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 80, in _send
+    self.wfile.write(body)
+  File "/usr/lib/python3.12/socketserver.py", line 840, in write
+    self._sock.sendall(b)
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+Tocando WAVE '/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/out/b0dbeebc-28fd-4e52-9553-f5778a44ca89.wav' : Signed 16 bit Little Endian, Taxa 22050 Hz, Mono
+Cancelado por sinal Terminado...
+aplay: pcm_write:2146: erro de escrita: Chamada de sistema interrompida
+Tocando WAVE '/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/out/413fe16d-23ed-4b9b-ba53-87061ef9972e.wav' : Signed 16 bit Little Endian, Taxa 22050 Hz, Mono
+Cancelado por sinal Terminado...
+aplay: pcm_write:2146: erro de escrita: Chamada de sistema interrompida
+Tocando WAVE '/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/out/c6bb876c-00c1-40a2-89da-fcf57adc352f.wav' : Signed 16 bit Little Endian, Taxa 22050 Hz, Mono
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 33912)
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/socketserver.py", line 318, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 349, in process_request
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.12/socketserver.py", line 761, in __init__
+    self.handle()
+  File "/usr/lib/python3.12/http/server.py", line 436, in handle
+    self.handle_one_request()
+  File "/usr/lib/python3.12/http/server.py", line 424, in handle_one_request
+    method()
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 85, in do_GET
+    self._send(200, {"ok": True, "ts": now_utc_iso()})
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 80, in _send
+    self.wfile.write(body)
+  File "/usr/lib/python3.12/socketserver.py", line 840, in write
+    self._sock.sendall(b)
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 33926)
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/socketserver.py", line 318, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 349, in process_request
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.12/socketserver.py", line 761, in __init__
+    self.handle()
+  File "/usr/lib/python3.12/http/server.py", line 436, in handle
+    self.handle_one_request()
+  File "/usr/lib/python3.12/http/server.py", line 424, in handle_one_request
+    method()
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 85, in do_GET
+    self._send(200, {"ok": True, "ts": now_utc_iso()})
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 80, in _send
+    self.wfile.write(body)
+  File "/usr/lib/python3.12/socketserver.py", line 840, in write
+    self._sock.sendall(b)
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 33934)
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/socketserver.py", line 318, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 349, in process_request
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.12/socketserver.py", line 761, in __init__
+    self.handle()
+  File "/usr/lib/python3.12/http/server.py", line 436, in handle
+    self.handle_one_request()
+  File "/usr/lib/python3.12/http/server.py", line 424, in handle_one_request
+    method()
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 85, in do_GET
+    self._send(200, {"ok": True, "ts": now_utc_iso()})
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 80, in _send
+    self.wfile.write(body)
+  File "/usr/lib/python3.12/socketserver.py", line 840, in write
+    self._sock.sendall(b)
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 33938)
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/socketserver.py", line 318, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 349, in process_request
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.12/socketserver.py", line 761, in __init__
+    self.handle()
+  File "/usr/lib/python3.12/http/server.py", line 436, in handle
+    self.handle_one_request()
+  File "/usr/lib/python3.12/http/server.py", line 424, in handle_one_request
+    method()
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 85, in do_GET
+    self._send(200, {"ok": True, "ts": now_utc_iso()})
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 80, in _send
+    self.wfile.write(body)
+  File "/usr/lib/python3.12/socketserver.py", line 840, in write
+    self._sock.sendall(b)
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 33946)
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/socketserver.py", line 318, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 349, in process_request
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.12/socketserver.py", line 761, in __init__
+    self.handle()
+  File "/usr/lib/python3.12/http/server.py", line 436, in handle
+    self.handle_one_request()
+  File "/usr/lib/python3.12/http/server.py", line 424, in handle_one_request
+    method()
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 85, in do_GET
+    self._send(200, {"ok": True, "ts": now_utc_iso()})
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 80, in _send
+    self.wfile.write(body)
+  File "/usr/lib/python3.12/socketserver.py", line 840, in write
+    self._sock.sendall(b)
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 33958)
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/socketserver.py", line 318, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 349, in process_request
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.12/socketserver.py", line 761, in __init__
+    self.handle()
+  File "/usr/lib/python3.12/http/server.py", line 436, in handle
+    self.handle_one_request()
+  File "/usr/lib/python3.12/http/server.py", line 424, in handle_one_request
+    method()
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 85, in do_GET
+    self._send(200, {"ok": True, "ts": now_utc_iso()})
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 80, in _send
+    self.wfile.write(body)
+  File "/usr/lib/python3.12/socketserver.py", line 840, in write
+    self._sock.sendall(b)
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+Tocando WAVE '/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/out/173c999c-53be-4b45-8a31-9feee68a1f6f.wav' : Signed 16 bit Little Endian, Taxa 22050 Hz, Mono
+Cancelado por sinal Terminado...
+Tocando WAVE '/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/out/1509d5f9-146f-4b98-9f77-64a19c18141a.wav' : Signed 16 bit Little Endian, Taxa 22050 Hz, Mono
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 34494)
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/socketserver.py", line 318, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 349, in process_request
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.12/socketserver.py", line 761, in __init__
+    self.handle()
+  File "/usr/lib/python3.12/http/server.py", line 436, in handle
+    self.handle_one_request()
+  File "/usr/lib/python3.12/http/server.py", line 424, in handle_one_request
+    method()
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 85, in do_GET
+    self._send(200, {"ok": True, "ts": now_utc_iso()})
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 80, in _send
+    self.wfile.write(body)
+  File "/usr/lib/python3.12/socketserver.py", line 840, in write
+    self._sock.sendall(b)
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 34508)
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/socketserver.py", line 318, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 349, in process_request
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.12/socketserver.py", line 761, in __init__
+    self.handle()
+  File "/usr/lib/python3.12/http/server.py", line 436, in handle
+    self.handle_one_request()
+  File "/usr/lib/python3.12/http/server.py", line 424, in handle_one_request
+    method()
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 85, in do_GET
+    self._send(200, {"ok": True, "ts": now_utc_iso()})
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 80, in _send
+    self.wfile.write(body)
+  File "/usr/lib/python3.12/socketserver.py", line 840, in write
+    self._sock.sendall(b)
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 34512)
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/socketserver.py", line 318, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 349, in process_request
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.12/socketserver.py", line 761, in __init__
+    self.handle()
+  File "/usr/lib/python3.12/http/server.py", line 436, in handle
+    self.handle_one_request()
+  File "/usr/lib/python3.12/http/server.py", line 424, in handle_one_request
+    method()
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 85, in do_GET
+    self._send(200, {"ok": True, "ts": now_utc_iso()})
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 80, in _send
+    self.wfile.write(body)
+  File "/usr/lib/python3.12/socketserver.py", line 840, in write
+    self._sock.sendall(b)
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 34518)
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/socketserver.py", line 318, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 349, in process_request
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.12/socketserver.py", line 761, in __init__
+    self.handle()
+  File "/usr/lib/python3.12/http/server.py", line 436, in handle
+    self.handle_one_request()
+  File "/usr/lib/python3.12/http/server.py", line 424, in handle_one_request
+    method()
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 85, in do_GET
+    self._send(200, {"ok": True, "ts": now_utc_iso()})
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 80, in _send
+    self.wfile.write(body)
+  File "/usr/lib/python3.12/socketserver.py", line 840, in write
+    self._sock.sendall(b)
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+Tocando WAVE '/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/out/bd3fe1b9-3073-41c1-ba59-5b734d9ce133.wav' : Signed 16 bit Little Endian, Taxa 22050 Hz, Mono
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 52422)
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/socketserver.py", line 318, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 349, in process_request
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.12/socketserver.py", line 761, in __init__
+    self.handle()
+  File "/usr/lib/python3.12/http/server.py", line 436, in handle
+    self.handle_one_request()
+  File "/usr/lib/python3.12/http/server.py", line 424, in handle_one_request
+    method()
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 85, in do_GET
+    self._send(200, {"ok": True, "ts": now_utc_iso()})
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 80, in _send
+    self.wfile.write(body)
+  File "/usr/lib/python3.12/socketserver.py", line 840, in write
+    self._sock.sendall(b)
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 52438)
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/socketserver.py", line 318, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 349, in process_request
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.12/socketserver.py", line 761, in __init__
+    self.handle()
+  File "/usr/lib/python3.12/http/server.py", line 436, in handle
+    self.handle_one_request()
+  File "/usr/lib/python3.12/http/server.py", line 424, in handle_one_request
+    method()
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 85, in do_GET
+    self._send(200, {"ok": True, "ts": now_utc_iso()})
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 80, in _send
+    self.wfile.write(body)
+  File "/usr/lib/python3.12/socketserver.py", line 840, in write
+    self._sock.sendall(b)
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 52446)
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/socketserver.py", line 318, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 349, in process_request
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.12/socketserver.py", line 761, in __init__
+    self.handle()
+  File "/usr/lib/python3.12/http/server.py", line 436, in handle
+    self.handle_one_request()
+  File "/usr/lib/python3.12/http/server.py", line 424, in handle_one_request
+    method()
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 85, in do_GET
+    self._send(200, {"ok": True, "ts": now_utc_iso()})
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 80, in _send
+    self.wfile.write(body)
+  File "/usr/lib/python3.12/socketserver.py", line 840, in write
+    self._sock.sendall(b)
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 54388)
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/socketserver.py", line 318, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 349, in process_request
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.12/socketserver.py", line 761, in __init__
+    self.handle()
+  File "/usr/lib/python3.12/http/server.py", line 436, in handle
+    self.handle_one_request()
+  File "/usr/lib/python3.12/http/server.py", line 424, in handle_one_request
+    method()
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 85, in do_GET
+    self._send(200, {"ok": True, "ts": now_utc_iso()})
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 80, in _send
+    self.wfile.write(body)
+  File "/usr/lib/python3.12/socketserver.py", line 840, in write
+    self._sock.sendall(b)
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 54402)
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/socketserver.py", line 318, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 349, in process_request
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.12/socketserver.py", line 761, in __init__
+    self.handle()
+  File "/usr/lib/python3.12/http/server.py", line 436, in handle
+    self.handle_one_request()
+  File "/usr/lib/python3.12/http/server.py", line 424, in handle_one_request
+    method()
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 85, in do_GET
+    self._send(200, {"ok": True, "ts": now_utc_iso()})
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 80, in _send
+    self.wfile.write(body)
+  File "/usr/lib/python3.12/socketserver.py", line 840, in write
+    self._sock.sendall(b)
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 54408)
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/socketserver.py", line 318, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 349, in process_request
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.12/socketserver.py", line 761, in __init__
+    self.handle()
+  File "/usr/lib/python3.12/http/server.py", line 436, in handle
+    self.handle_one_request()
+  File "/usr/lib/python3.12/http/server.py", line 424, in handle_one_request
+    method()
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 85, in do_GET
+    self._send(200, {"ok": True, "ts": now_utc_iso()})
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 80, in _send
+    self.wfile.write(body)
+  File "/usr/lib/python3.12/socketserver.py", line 840, in write
+    self._sock.sendall(b)
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+Tocando WAVE '/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/out/e9d3a96b-1fc3-4bfe-a21b-215b5ea8f497.wav' : Signed 16 bit Little Endian, Taxa 22050 Hz, Mono
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 52048)
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/socketserver.py", line 318, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 349, in process_request
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.12/socketserver.py", line 761, in __init__
+    self.handle()
+  File "/usr/lib/python3.12/http/server.py", line 436, in handle
+    self.handle_one_request()
+  File "/usr/lib/python3.12/http/server.py", line 424, in handle_one_request
+    method()
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 85, in do_GET
+    self._send(200, {"ok": True, "ts": now_utc_iso()})
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 80, in _send
+    self.wfile.write(body)
+  File "/usr/lib/python3.12/socketserver.py", line 840, in write
+    self._sock.sendall(b)
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 52052)
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/socketserver.py", line 318, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 349, in process_request
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.12/socketserver.py", line 761, in __init__
+    self.handle()
+  File "/usr/lib/python3.12/http/server.py", line 436, in handle
+    self.handle_one_request()
+  File "/usr/lib/python3.12/http/server.py", line 424, in handle_one_request
+    method()
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 85, in do_GET
+    self._send(200, {"ok": True, "ts": now_utc_iso()})
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 80, in _send
+    self.wfile.write(body)
+  File "/usr/lib/python3.12/socketserver.py", line 840, in write
+    self._sock.sendall(b)
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 52068)
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/socketserver.py", line 318, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 349, in process_request
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.12/socketserver.py", line 761, in __init__
+    self.handle()
+  File "/usr/lib/python3.12/http/server.py", line 436, in handle
+    self.handle_one_request()
+  File "/usr/lib/python3.12/http/server.py", line 424, in handle_one_request
+    method()
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 85, in do_GET
+    self._send(200, {"ok": True, "ts": now_utc_iso()})
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 80, in _send
+    self.wfile.write(body)
+  File "/usr/lib/python3.12/socketserver.py", line 840, in write
+    self._sock.sendall(b)
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 52072)
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/socketserver.py", line 318, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 349, in process_request
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.12/socketserver.py", line 761, in __init__
+    self.handle()
+  File "/usr/lib/python3.12/http/server.py", line 436, in handle
+    self.handle_one_request()
+  File "/usr/lib/python3.12/http/server.py", line 424, in handle_one_request
+    method()
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 85, in do_GET
+    self._send(200, {"ok": True, "ts": now_utc_iso()})
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 80, in _send
+    self.wfile.write(body)
+  File "/usr/lib/python3.12/socketserver.py", line 840, in write
+    self._sock.sendall(b)
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 34940)
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/socketserver.py", line 318, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 349, in process_request
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.12/socketserver.py", line 761, in __init__
+    self.handle()
+  File "/usr/lib/python3.12/http/server.py", line 436, in handle
+    self.handle_one_request()
+  File "/usr/lib/python3.12/http/server.py", line 424, in handle_one_request
+    method()
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 85, in do_GET
+    self._send(200, {"ok": True, "ts": now_utc_iso()})
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 80, in _send
+    self.wfile.write(body)
+  File "/usr/lib/python3.12/socketserver.py", line 840, in write
+    self._sock.sendall(b)
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 34942)
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/socketserver.py", line 318, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 349, in process_request
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.12/socketserver.py", line 761, in __init__
+    self.handle()
+  File "/usr/lib/python3.12/http/server.py", line 436, in handle
+    self.handle_one_request()
+  File "/usr/lib/python3.12/http/server.py", line 424, in handle_one_request
+    method()
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 85, in do_GET
+    self._send(200, {"ok": True, "ts": now_utc_iso()})
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 80, in _send
+    self.wfile.write(body)
+  File "/usr/lib/python3.12/socketserver.py", line 840, in write
+    self._sock.sendall(b)
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+Tocando WAVE '/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/out/79003d15-5cea-4602-aeb4-fa6da965b36e.wav' : Signed 16 bit Little Endian, Taxa 22050 Hz, Mono
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 54266)
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/socketserver.py", line 318, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 349, in process_request
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.12/socketserver.py", line 761, in __init__
+    self.handle()
+  File "/usr/lib/python3.12/http/server.py", line 436, in handle
+    self.handle_one_request()
+  File "/usr/lib/python3.12/http/server.py", line 424, in handle_one_request
+    method()
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 85, in do_GET
+    self._send(200, {"ok": True, "ts": now_utc_iso()})
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 80, in _send
+    self.wfile.write(body)
+  File "/usr/lib/python3.12/socketserver.py", line 840, in write
+    self._sock.sendall(b)
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 42054)
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/socketserver.py", line 318, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 349, in process_request
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.12/socketserver.py", line 761, in __init__
+    self.handle()
+  File "/usr/lib/python3.12/http/server.py", line 436, in handle
+    self.handle_one_request()
+  File "/usr/lib/python3.12/http/server.py", line 424, in handle_one_request
+    method()
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 85, in do_GET
+    self._send(200, {"ok": True, "ts": now_utc_iso()})
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 80, in _send
+    self.wfile.write(body)
+  File "/usr/lib/python3.12/socketserver.py", line 840, in write
+    self._sock.sendall(b)
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 42062)
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/socketserver.py", line 318, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 349, in process_request
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.12/socketserver.py", line 761, in __init__
+    self.handle()
+  File "/usr/lib/python3.12/http/server.py", line 436, in handle
+    self.handle_one_request()
+  File "/usr/lib/python3.12/http/server.py", line 424, in handle_one_request
+    method()
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 85, in do_GET
+    self._send(200, {"ok": True, "ts": now_utc_iso()})
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 80, in _send
+    self.wfile.write(body)
+  File "/usr/lib/python3.12/socketserver.py", line 840, in write
+    self._sock.sendall(b)
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 42074)
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/socketserver.py", line 318, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 349, in process_request
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.12/socketserver.py", line 761, in __init__
+    self.handle()
+  File "/usr/lib/python3.12/http/server.py", line 436, in handle
+    self.handle_one_request()
+  File "/usr/lib/python3.12/http/server.py", line 424, in handle_one_request
+    method()
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 85, in do_GET
+    self._send(200, {"ok": True, "ts": now_utc_iso()})
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 80, in _send
+    self.wfile.write(body)
+  File "/usr/lib/python3.12/socketserver.py", line 840, in write
+    self._sock.sendall(b)
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+Tocando WAVE '/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/out/b4816707-f4cb-4158-9c08-14a73e319ba6.wav' : Signed 16 bit Little Endian, Taxa 22050 Hz, Mono
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 42088)
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/socketserver.py", line 318, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 349, in process_request
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.12/socketserver.py", line 761, in __init__
+    self.handle()
+  File "/usr/lib/python3.12/http/server.py", line 436, in handle
+    self.handle_one_request()
+  File "/usr/lib/python3.12/http/server.py", line 424, in handle_one_request
+    method()
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 85, in do_GET
+    self._send(200, {"ok": True, "ts": now_utc_iso()})
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 80, in _send
+    self.wfile.write(body)
+  File "/usr/lib/python3.12/socketserver.py", line 840, in write
+    self._sock.sendall(b)
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 49060)
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/socketserver.py", line 318, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 349, in process_request
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.12/socketserver.py", line 761, in __init__
+    self.handle()
+  File "/usr/lib/python3.12/http/server.py", line 436, in handle
+    self.handle_one_request()
+  File "/usr/lib/python3.12/http/server.py", line 424, in handle_one_request
+    method()
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 85, in do_GET
+    self._send(200, {"ok": True, "ts": now_utc_iso()})
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 80, in _send
+    self.wfile.write(body)
+  File "/usr/lib/python3.12/socketserver.py", line 840, in write
+    self._sock.sendall(b)
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 49074)
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/socketserver.py", line 318, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 349, in process_request
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.12/socketserver.py", line 761, in __init__
+    self.handle()
+  File "/usr/lib/python3.12/http/server.py", line 436, in handle
+    self.handle_one_request()
+  File "/usr/lib/python3.12/http/server.py", line 424, in handle_one_request
+    method()
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 85, in do_GET
+    self._send(200, {"ok": True, "ts": now_utc_iso()})
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 80, in _send
+    self.wfile.write(body)
+  File "/usr/lib/python3.12/socketserver.py", line 840, in write
+    self._sock.sendall(b)
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+Tocando WAVE '/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/out/c3c442a1-e41b-44bd-a867-43b890a9b220.wav' : Signed 16 bit Little Endian, Taxa 22050 Hz, Mono
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 49090)
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/socketserver.py", line 318, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 349, in process_request
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.12/socketserver.py", line 761, in __init__
+    self.handle()
+  File "/usr/lib/python3.12/http/server.py", line 436, in handle
+    self.handle_one_request()
+  File "/usr/lib/python3.12/http/server.py", line 424, in handle_one_request
+    method()
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 85, in do_GET
+    self._send(200, {"ok": True, "ts": now_utc_iso()})
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 80, in _send
+    self.wfile.write(body)
+  File "/usr/lib/python3.12/socketserver.py", line 840, in write
+    self._sock.sendall(b)
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 49106)
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/socketserver.py", line 318, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 349, in process_request
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.12/socketserver.py", line 761, in __init__
+    self.handle()
+  File "/usr/lib/python3.12/http/server.py", line 436, in handle
+    self.handle_one_request()
+  File "/usr/lib/python3.12/http/server.py", line 424, in handle_one_request
+    method()
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 85, in do_GET
+    self._send(200, {"ok": True, "ts": now_utc_iso()})
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 80, in _send
+    self.wfile.write(body)
+  File "/usr/lib/python3.12/socketserver.py", line 840, in write
+    self._sock.sendall(b)
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 54206)
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/socketserver.py", line 318, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 349, in process_request
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.12/socketserver.py", line 761, in __init__
+    self.handle()
+  File "/usr/lib/python3.12/http/server.py", line 436, in handle
+    self.handle_one_request()
+  File "/usr/lib/python3.12/http/server.py", line 424, in handle_one_request
+    method()
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 85, in do_GET
+    self._send(200, {"ok": True, "ts": now_utc_iso()})
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 80, in _send
+    self.wfile.write(body)
+  File "/usr/lib/python3.12/socketserver.py", line 840, in write
+    self._sock.sendall(b)
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 54212)
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/socketserver.py", line 318, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 349, in process_request
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.12/socketserver.py", line 761, in __init__
+    self.handle()
+  File "/usr/lib/python3.12/http/server.py", line 436, in handle
+    self.handle_one_request()
+  File "/usr/lib/python3.12/http/server.py", line 424, in handle_one_request
+    method()
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 85, in do_GET
+    self._send(200, {"ok": True, "ts": now_utc_iso()})
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 80, in _send
+    self.wfile.write(body)
+  File "/usr/lib/python3.12/socketserver.py", line 840, in write
+    self._sock.sendall(b)
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 54222)
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/socketserver.py", line 318, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 349, in process_request
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.12/socketserver.py", line 761, in __init__
+    self.handle()
+  File "/usr/lib/python3.12/http/server.py", line 436, in handle
+    self.handle_one_request()
+  File "/usr/lib/python3.12/http/server.py", line 424, in handle_one_request
+    method()
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 85, in do_GET
+    self._send(200, {"ok": True, "ts": now_utc_iso()})
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 80, in _send
+    self.wfile.write(body)
+  File "/usr/lib/python3.12/socketserver.py", line 840, in write
+    self._sock.sendall(b)
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 54232)
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/socketserver.py", line 318, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 349, in process_request
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.12/socketserver.py", line 761, in __init__
+    self.handle()
+  File "/usr/lib/python3.12/http/server.py", line 436, in handle
+    self.handle_one_request()
+  File "/usr/lib/python3.12/http/server.py", line 424, in handle_one_request
+    method()
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 85, in do_GET
+    self._send(200, {"ok": True, "ts": now_utc_iso()})
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 80, in _send
+    self.wfile.write(body)
+  File "/usr/lib/python3.12/socketserver.py", line 840, in write
+    self._sock.sendall(b)
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+Tocando WAVE '/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/out/58ee856a-6df8-467f-a38e-d833c8d0edfd.wav' : Signed 16 bit Little Endian, Taxa 22050 Hz, Mono
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 59066)
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/socketserver.py", line 318, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 349, in process_request
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.12/socketserver.py", line 761, in __init__
+    self.handle()
+  File "/usr/lib/python3.12/http/server.py", line 436, in handle
+    self.handle_one_request()
+  File "/usr/lib/python3.12/http/server.py", line 424, in handle_one_request
+    method()
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 85, in do_GET
+    self._send(200, {"ok": True, "ts": now_utc_iso()})
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 80, in _send
+    self.wfile.write(body)
+  File "/usr/lib/python3.12/socketserver.py", line 840, in write
+    self._sock.sendall(b)
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 59082)
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/socketserver.py", line 318, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 349, in process_request
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.12/socketserver.py", line 761, in __init__
+    self.handle()
+  File "/usr/lib/python3.12/http/server.py", line 436, in handle
+    self.handle_one_request()
+  File "/usr/lib/python3.12/http/server.py", line 424, in handle_one_request
+    method()
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 85, in do_GET
+    self._send(200, {"ok": True, "ts": now_utc_iso()})
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 80, in _send
+    self.wfile.write(body)
+  File "/usr/lib/python3.12/socketserver.py", line 840, in write
+    self._sock.sendall(b)
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 59090)
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/socketserver.py", line 318, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 349, in process_request
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.12/socketserver.py", line 761, in __init__
+    self.handle()
+  File "/usr/lib/python3.12/http/server.py", line 436, in handle
+    self.handle_one_request()
+  File "/usr/lib/python3.12/http/server.py", line 424, in handle_one_request
+    method()
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 85, in do_GET
+    self._send(200, {"ok": True, "ts": now_utc_iso()})
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 80, in _send
+    self.wfile.write(body)
+  File "/usr/lib/python3.12/socketserver.py", line 840, in write
+    self._sock.sendall(b)
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 59094)
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/socketserver.py", line 318, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 349, in process_request
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.12/socketserver.py", line 761, in __init__
+    self.handle()
+  File "/usr/lib/python3.12/http/server.py", line 436, in handle
+    self.handle_one_request()
+  File "/usr/lib/python3.12/http/server.py", line 424, in handle_one_request
+    method()
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 85, in do_GET
+    self._send(200, {"ok": True, "ts": now_utc_iso()})
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 80, in _send
+    self.wfile.write(body)
+  File "/usr/lib/python3.12/socketserver.py", line 840, in write
+    self._sock.sendall(b)
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 59096)
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/socketserver.py", line 318, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 349, in process_request
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.12/socketserver.py", line 761, in __init__
+    self.handle()
+  File "/usr/lib/python3.12/http/server.py", line 436, in handle
+    self.handle_one_request()
+  File "/usr/lib/python3.12/http/server.py", line 424, in handle_one_request
+    method()
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 85, in do_GET
+    self._send(200, {"ok": True, "ts": now_utc_iso()})
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 80, in _send
+    self.wfile.write(body)
+  File "/usr/lib/python3.12/socketserver.py", line 840, in write
+    self._sock.sendall(b)
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 46826)
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/socketserver.py", line 318, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 349, in process_request
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.12/socketserver.py", line 761, in __init__
+    self.handle()
+  File "/usr/lib/python3.12/http/server.py", line 436, in handle
+    self.handle_one_request()
+  File "/usr/lib/python3.12/http/server.py", line 424, in handle_one_request
+    method()
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 85, in do_GET
+    self._send(200, {"ok": True, "ts": now_utc_iso()})
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 80, in _send
+    self.wfile.write(body)
+  File "/usr/lib/python3.12/socketserver.py", line 840, in write
+    self._sock.sendall(b)
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+Tocando WAVE '/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/out/3f03f1e8-f9b9-4c88-96fe-3cf788d64761.wav' : Signed 16 bit Little Endian, Taxa 22050 Hz, Mono
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 37750)
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/socketserver.py", line 318, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 349, in process_request
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.12/socketserver.py", line 761, in __init__
+    self.handle()
+  File "/usr/lib/python3.12/http/server.py", line 436, in handle
+    self.handle_one_request()
+  File "/usr/lib/python3.12/http/server.py", line 424, in handle_one_request
+    method()
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 85, in do_GET
+    self._send(200, {"ok": True, "ts": now_utc_iso()})
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 80, in _send
+    self.wfile.write(body)
+  File "/usr/lib/python3.12/socketserver.py", line 840, in write
+    self._sock.sendall(b)
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 37758)
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/socketserver.py", line 318, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 349, in process_request
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.12/socketserver.py", line 761, in __init__
+    self.handle()
+  File "/usr/lib/python3.12/http/server.py", line 436, in handle
+    self.handle_one_request()
+  File "/usr/lib/python3.12/http/server.py", line 424, in handle_one_request
+    method()
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 85, in do_GET
+    self._send(200, {"ok": True, "ts": now_utc_iso()})
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 80, in _send
+    self.wfile.write(body)
+  File "/usr/lib/python3.12/socketserver.py", line 840, in write
+    self._sock.sendall(b)
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 37768)
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/socketserver.py", line 318, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 349, in process_request
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.12/socketserver.py", line 761, in __init__
+    self.handle()
+  File "/usr/lib/python3.12/http/server.py", line 436, in handle
+    self.handle_one_request()
+  File "/usr/lib/python3.12/http/server.py", line 424, in handle_one_request
+    method()
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 85, in do_GET
+    self._send(200, {"ok": True, "ts": now_utc_iso()})
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 80, in _send
+    self.wfile.write(body)
+  File "/usr/lib/python3.12/socketserver.py", line 840, in write
+    self._sock.sendall(b)
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 37782)
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/socketserver.py", line 318, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 349, in process_request
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.12/socketserver.py", line 761, in __init__
+    self.handle()
+  File "/usr/lib/python3.12/http/server.py", line 436, in handle
+    self.handle_one_request()
+  File "/usr/lib/python3.12/http/server.py", line 424, in handle_one_request
+    method()
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 85, in do_GET
+    self._send(200, {"ok": True, "ts": now_utc_iso()})
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 80, in _send
+    self.wfile.write(body)
+  File "/usr/lib/python3.12/socketserver.py", line 840, in write
+    self._sock.sendall(b)
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 33232)
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/socketserver.py", line 318, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 349, in process_request
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.12/socketserver.py", line 761, in __init__
+    self.handle()
+  File "/usr/lib/python3.12/http/server.py", line 436, in handle
+    self.handle_one_request()
+  File "/usr/lib/python3.12/http/server.py", line 424, in handle_one_request
+    method()
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 85, in do_GET
+    self._send(200, {"ok": True, "ts": now_utc_iso()})
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 80, in _send
+    self.wfile.write(body)
+  File "/usr/lib/python3.12/socketserver.py", line 840, in write
+    self._sock.sendall(b)
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 33248)
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/socketserver.py", line 318, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 349, in process_request
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.12/socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.12/socketserver.py", line 761, in __init__
+    self.handle()
+  File "/usr/lib/python3.12/http/server.py", line 436, in handle
+    self.handle_one_request()
+  File "/usr/lib/python3.12/http/server.py", line 424, in handle_one_request
+    method()
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 85, in do_GET
+    self._send(200, {"ok": True, "ts": now_utc_iso()})
+  File "/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/piper_server.py", line 80, in _send
+    self.wfile.write(body)
+  File "/usr/lib/python3.12/socketserver.py", line 840, in write
+    self._sock.sendall(b)
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+Tocando WAVE '/home/luiz/Documentos/projetos/Mudança de Setup LimaDev/Setpuchange/02_assistente_voz/tts/piper/out/825528fc-f787-4f0d-8f56-4dec3ca67856.wav' : Signed 16 bit Little Endian, Taxa 22050 Hz, Mono
+Cancelado por sinal Terminado...
+aplay: pcm_write:2146: erro de escrita: Chamada de sistema interrompida

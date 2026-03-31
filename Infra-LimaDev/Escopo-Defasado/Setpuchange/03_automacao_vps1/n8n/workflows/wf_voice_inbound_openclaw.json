@@ -1,0 +1,97 @@
+[
+  {
+    "updatedAt": "2026-02-23T18:20:00.000Z",
+    "createdAt": "2026-02-22T11:29:54.488Z",
+    "id": "PndQfLZsfDZ7X9YQ",
+    "name": "My workflow",
+    "description": "Entrada de voz (STT) e chamada do Openclaw local",
+    "active": true,
+    "isArchived": false,
+    "nodes": [
+      {
+        "parameters": {
+          "httpMethod": "POST",
+          "path": "comando-voz",
+          "options": {}
+        },
+        "type": "n8n-nodes-base.webhook",
+        "typeVersion": 2.1,
+        "position": [
+          0,
+          0
+        ],
+        "id": "7013cda8-504d-4e2e-8c4c-0a585c68177d",
+        "name": "Webhook",
+        "webhookId": "7b22f025-d252-4a44-abb9-05b4a6d37fef",
+        "onError": "continueRegularOutput"
+      },
+      {
+        "parameters": {
+          "authentication": "privateKey",
+          "command": "=python3 /root/bot.py \"{{ $json.body.stt?.text || $json.stt?.text || $json.body.comando || $json.comando || '' }}\" \"{{ $json.body.request_id || $json.request_id || '' }}\""
+        },
+        "type": "n8n-nodes-base.ssh",
+        "typeVersion": 1,
+        "position": [
+          208,
+          0
+        ],
+        "id": "66c709ad-dd10-4d6f-9882-1c38fc231dcd",
+        "name": "Execute a command",
+        "credentials": {
+          "sshPrivateKey": {
+            "id": "8NgOLeDNNEsdVdxC",
+            "name": "SSH Password account"
+          }
+        }
+      }
+    ],
+    "connections": {
+      "Webhook": {
+        "main": [
+          [
+            {
+              "node": "Execute a command",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      }
+    },
+    "settings": {
+      "executionOrder": "v1",
+      "binaryMode": "separate",
+      "availableInMCP": false
+    },
+    "staticData": null,
+    "meta": {
+      "templateCredsSetupCompleted": true
+    },
+    "pinData": {},
+    "versionId": "72b000ab-2969-484f-945a-2410fb3ff13b",
+    "activeVersionId": "72b000ab-2969-484f-945a-2410fb3ff13b",
+    "versionCounter": 28,
+    "triggerCount": 1,
+    "tags": [],
+    "shared": [
+      {
+        "updatedAt": "2026-02-22T11:29:54.491Z",
+        "createdAt": "2026-02-22T11:29:54.491Z",
+        "role": "workflow:owner",
+        "workflowId": "PndQfLZsfDZ7X9YQ",
+        "projectId": "FOJWDGHAzaLnBvR3",
+        "project": {
+          "updatedAt": "2026-02-22T10:13:54.248Z",
+          "createdAt": "2026-02-22T10:08:33.578Z",
+          "id": "FOJWDGHAzaLnBvR3",
+          "name": "Luiz Dodero Jr <luizdodero@gmail.com>",
+          "type": "personal",
+          "icon": null,
+          "description": null,
+          "creatorId": "fc03c79f-aa3a-4d33-88ee-c35454811e37"
+        }
+      }
+    ]
+  }
+]

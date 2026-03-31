@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Name=VPN ReforcePro
+Comment=Liga/Desliga VPN Grupo ReforcePro (L2TP/IPSec)
+Exec=bash -c 'if ip link show ppp0 &>/dev/null; then pkexec vpn-reforcopro off && notify-send "VPN ReforcePro" "Desconectada"; else pkexec vpn-reforcopro on && notify-send "VPN ReforcePro" "Conectada!"; fi'
+Icon=network-vpn
+Terminal=false
+Type=Application
+Categories=Network;
+Keywords=VPN;ReforcePro;
+StartupNotify=true

@@ -1,0 +1,23 @@
+{
+  "request_id": "voice-e2e-YYYYMMDDHHMMSS",
+  "session_id": "voice-session-local",
+  "captured_at": "2026-02-23T18:21:36Z",
+  "comando": "fale um resumo rapido do setup atual em uma frase",
+  "source": {
+    "node": "notebook_local",
+    "component": "faster_whisper",
+    "device_id": "notebook"
+  },
+  "stt": {
+    "provider": "faster-whisper",
+    "model_size": "small",
+    "language": "pt",
+    "text": "fale um resumo rapido do setup atual em uma frase"
+  },
+  "timings_ms": {
+    "listen": 0,
+    "transcribe": 0,
+    "send": 0,
+    "total": 0
+  }
+}

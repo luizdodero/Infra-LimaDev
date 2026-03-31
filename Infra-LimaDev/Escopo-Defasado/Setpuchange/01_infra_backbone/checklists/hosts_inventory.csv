@@ -1,0 +1,6 @@
+# nome;dns;ipv4;ipv6;
+note-limdev;note-limdev.tailed51fe.ts.net;100.123.109.53;fd7a:115c:a1e0::2001:6da4;
+mini-pc;mini-pc.tailed51fe.ts.net;100.87.104.42;fd7a:115c:a1e0::5d3b:682a;
+vps-assist;vps-assist.tailed51fe.ts.net;100.65.159.1;fd7a:115c:a1e0::e701:9f02;
+vps-prod;vps-prod.tailed51fe.ts.net;100.118.12.49;fd7a:115c:a1e0::3e3b:c31;
+vps-dev;vps-dev.tailed51fe.ts.net;100.120.55.28;fd7a:115c:a1e0::203b:371c;

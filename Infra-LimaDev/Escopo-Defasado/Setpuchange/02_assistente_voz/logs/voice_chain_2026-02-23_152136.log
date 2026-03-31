@@ -1,0 +1,29 @@
+[2026-02-23 15:21:36] Iniciando validacao: faster-whisper -> n8n -> openclaw -> n8n -> piper
+[2026-02-23 15:21:36] request_id=voice-e2e-2026-02-23_152136
+[2026-02-23 15:21:36] Executando check rapido de backbone com edge TCP
+=== Validacao de Backbone ===
+Hosts file: 01_infra_backbone/checklists/hosts.csv
+SSH port: 22022 | HTTPS port: 443 | Timeout: 5s
+Assistente edge port padrao (Openclaw): 18789
+Assistente edge check mode: tcp
+
+NOME               HOST                                 TAILSCALE    SSH        HTTPS     
+------------------ ------------------------------------ ------------ ---------- ----------
+note-limdev        note-limdev.tailed51fe.ts.net        OK           -          -         
+vps-assist         vps-assist.tailed51fe.ts.net         OK           OK         OK        
+vps-prod           vps-prod.tailed51fe.ts.net           OK           OK         OK        
+vps-dev            vps-dev.tailed51fe.ts.net            OK           OK         OK        
+
+Assistente edge: OK (tcp vps-assist.tailed51fe.ts.net:18789)
+
+Hosts avaliados: 4
+Falhas: 0
+Resultado: PASS
+[2026-02-23 15:21:36] Disparando webhook de entrada: https://vps-assist.tailed51fe.ts.net/webhook/comando-voz
+[2026-02-23 15:21:36] Resposta webhook: HTTP=200 body={"message":"Workflow was started"}
+[2026-02-23 15:21:36] Conferindo execucoes no n8n e fila Piper
+[2026-02-23 15:21:37] Tentativa 1/20: {"inbound_success": false, "return_success": false, "inbound_exec_id": null, "return_exec_id": null, "recent": [{"id": 14, "workflowId": "PndQfLZsfDZ7X9YQ", "status": "running", "startedAt": "2026-02-23 18:21:36.921", "stoppedAt": null}], "queue_hit": false}
+[2026-02-23 15:21:40] Tentativa 2/20: {"inbound_success": false, "return_success": false, "inbound_exec_id": null, "return_exec_id": null, "recent": [{"id": 14, "workflowId": "PndQfLZsfDZ7X9YQ", "status": "running", "startedAt": "2026-02-23 18:21:36.921", "stoppedAt": null}], "queue_hit": false}
+[2026-02-23 15:21:42] Tentativa 3/20: {"inbound_success": false, "return_success": false, "inbound_exec_id": null, "return_exec_id": null, "recent": [{"id": 14, "workflowId": "PndQfLZsfDZ7X9YQ", "status": "running", "startedAt": "2026-02-23 18:21:36.921", "stoppedAt": null}], "queue_hit": false}
+[2026-02-23 15:21:45] Tentativa 4/20: {"inbound_success": true, "return_success": true, "inbound_exec_id": 14, "return_exec_id": 15, "recent": [{"id": 15, "workflowId": "VozRetn8nPiper01", "status": "success", "startedAt": "2026-02-23 18:21:43.629", "stoppedAt": "2026-02-23 18:21:44.015"}, {"id": 14, "workflowId": "PndQfLZsfDZ7X9YQ", "status": "success", "startedAt": "2026-02-23 18:21:36.921", "stoppedAt": "2026-02-23 18:21:43.645"}], "queue_hit": true}
+[2026-02-23 15:21:45] PASS: cadeia validada ate a fila do Piper.

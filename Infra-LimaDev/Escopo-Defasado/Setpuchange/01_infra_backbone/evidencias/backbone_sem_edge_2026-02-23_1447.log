@@ -1,0 +1,18 @@
+=== Validacao de Backbone ===
+Hosts file: 01_infra_backbone/checklists/hosts.csv
+SSH port: 22022 | HTTPS port: 443 | Timeout: 5s
+Assistente edge port padrao (Openclaw): 18789
+Assistente edge check mode: http
+
+NOME               HOST                                 TAILSCALE    SSH        HTTPS     
+------------------ ------------------------------------ ------------ ---------- ----------
+note-limdev        note-limdev.tailed51fe.ts.net        OK           -          -         
+vps-assist         vps-assist.tailed51fe.ts.net         OK           OK         OK        
+vps-prod           vps-prod.tailed51fe.ts.net           OK           OK         OK        
+vps-dev            vps-dev.tailed51fe.ts.net            OK           OK         OK        
+
+Assistente edge: SKIP
+
+Hosts avaliados: 4
+Falhas: 0
+Resultado: PASS

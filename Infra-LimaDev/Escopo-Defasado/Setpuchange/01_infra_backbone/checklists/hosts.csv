@@ -1,0 +1,6 @@
+# nome,host,check_ssh,check_https
+note-limdev,note-limdev.tailed51fe.ts.net,0,0
+mini-pc,mini-pc.tailed51fe.ts.net,1,0
+vps-assist,vps-assist.tailed51fe.ts.net,1,1
+vps-prod,vps-prod.tailed51fe.ts.net,1,1
+vps-dev,vps-dev.tailed51fe.ts.net,1,1

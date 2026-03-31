@@ -1,0 +1,3 @@
+[submodule "Infra-LimaDev/Novo-Escopo/vps-assist-ansible-setup"]
+	path = Infra-LimaDev/Novo-Escopo/vps-assist-ansible-setup
+	url = git@github-voxgate:luizdodero/openclaw-vps-setup.git

@@ -1,0 +1,97 @@
+[
+  {
+    "updatedAt": "2026-02-23T18:20:00.000Z",
+    "createdAt": "2026-02-23T18:20:00.000Z",
+    "id": "VozRetn8nPiper01",
+    "name": "Voice Return Piper",
+    "description": "Recebe resposta do Openclaw e encaminha para camada de TTS Piper",
+    "active": true,
+    "isArchived": false,
+    "nodes": [
+      {
+        "parameters": {
+          "httpMethod": "POST",
+          "path": "resposta-openclaw",
+          "options": {}
+        },
+        "type": "n8n-nodes-base.webhook",
+        "typeVersion": 2.1,
+        "position": [
+          0,
+          0
+        ],
+        "id": "f24d6c6a-6b69-4a71-8f9f-f13de2eb7e12",
+        "name": "Webhook",
+        "webhookId": "63a08b25-6efe-42f8-985a-9c233727a5ca",
+        "onError": "continueRegularOutput"
+      },
+      {
+        "parameters": {
+          "authentication": "privateKey",
+        "command": "=PIPER_NOTEBOOK_WEBHOOK_URL=\"http://note-limdev.tailed51fe.ts.net:18888/tts\" python3 /root/piper_bridge.py \"{{ $json.body.assistant_text || $json.assistant_text || '' }}\" \"{{ $json.body.request_id || $json.request_id || '' }}\""
+        },
+        "type": "n8n-nodes-base.ssh",
+        "typeVersion": 1,
+        "position": [
+          240,
+          0
+        ],
+        "id": "3a116f2c-1f23-4593-b88a-38d21a0b4eb9",
+        "name": "Dispatch Piper",
+        "credentials": {
+          "sshPrivateKey": {
+            "id": "8NgOLeDNNEsdVdxC",
+            "name": "SSH Password account"
+          }
+        }
+      }
+    ],
+    "connections": {
+      "Webhook": {
+        "main": [
+          [
+            {
+              "node": "Dispatch Piper",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      }
+    },
+    "settings": {
+      "executionOrder": "v1",
+      "binaryMode": "separate",
+      "availableInMCP": false
+    },
+    "staticData": null,
+    "meta": {
+      "templateCredsSetupCompleted": true
+    },
+    "pinData": {},
+    "versionId": "5a2bc818-3b27-4d8f-a3f8-f31f4c1d3b01",
+    "activeVersionId": "5a2bc818-3b27-4d8f-a3f8-f31f4c1d3b01",
+    "versionCounter": 1,
+    "triggerCount": 1,
+    "tags": [],
+    "shared": [
+      {
+        "updatedAt": "2026-02-23T18:20:00.000Z",
+        "createdAt": "2026-02-23T18:20:00.000Z",
+        "role": "workflow:owner",
+        "workflowId": "VozRetn8nPiper01",
+        "projectId": "FOJWDGHAzaLnBvR3",
+        "project": {
+          "updatedAt": "2026-02-22T10:13:54.248Z",
+          "createdAt": "2026-02-22T10:08:33.578Z",
+          "id": "FOJWDGHAzaLnBvR3",
+          "name": "Luiz Dodero Jr <luizdodero@gmail.com>",
+          "type": "personal",
+          "icon": null,
+          "description": null,
+          "creatorId": "fc03c79f-aa3a-4d33-88ee-c35454811e37"
+        }
+      }
+    ]
+  }
+]

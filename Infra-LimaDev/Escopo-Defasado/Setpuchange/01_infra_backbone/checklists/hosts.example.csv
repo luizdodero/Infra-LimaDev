@@ -1,0 +1,5 @@
+# nome,host,check_ssh,check_https
+notebook_local,notebook-local.tailnet,1,0
+vps1_assist,vps1-assist.tailnet,1,1
+vps2_prod,vps2-prod.tailnet,1,1
+vps3_dev,vps3-dev.tailnet,1,1

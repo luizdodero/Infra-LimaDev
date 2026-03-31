@@ -1,0 +1,20 @@
+# Credenciais e segredos
+*.env
+credenciais.conf
+*.key
+*.pem
+*.p12
+
+# Chaves SSH privadas
+id_*
+!id_*.pub
+
+# Claude settings locais
+.claude/
+
+# VS Code local
+.vscode/
+
+# Sistema
+.DS_Store
+Thumbs.db
