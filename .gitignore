@@ -15,6 +15,9 @@ id_*
 # VS Code local
 .vscode/
 
+# Modelos binários de TTS (grandes demais para git — ver README.download.md no diretório)
+*.onnx
+
 # Sistema
 .DS_Store
 Thumbs.db
