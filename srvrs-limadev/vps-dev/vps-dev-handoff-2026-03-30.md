@@ -1,0 +1,13 @@
+# VPS-DEV handoff 2026-03-30
+- Contexto: vps-dev foi saneado para voltar ao papel de host de codigo em andamento.
+- Removido: stacks Docker Portaria + VoxGate, volumes, imagens, build cache; ansible global quebrado removido.
+- Estado atual host: sem containers Docker; UFW ativo (22022/80/443); Fail2ban ativo; nginx ativo.
+- Fase 1 concluida: pm2-root habilitado/ativo para onboarding-form; infra-entrada.service criado/habilitado/ativo para /home/opsbot/projetos/infra-refpro/entrada-dados/server.py rodando como opsbot.
+- Fase 2 parcialmente concluida: certbot/apache2-utils instalados; Basic Auth criado em /etc/nginx/.htpasswd-reforce; vhosts nginx ativos para infra.reforce.pro.br -> 127.0.0.1:8080 e onb-mkt.reforce.pro.br -> 127.0.0.1:3000.
+- Credencial atual Basic Auth: usuario infra-refpro@refpro; senha definida em Infra-LimaDev/Novo-Escopo/vps-dev/acessoweb.env.
+- Validacao local concluida com curl --resolve: infra=200 com auth, onb-mkt=200 com auth, sem auth=401.
+- SSL publico pendente exclusivamente de DNS: criar A records infra.reforce.pro.br e onb-mkt.reforce.pro.br -> 129.121.36.133.
+- Proximo passo quando DNS propagar: executar `certbot --nginx -d infra.reforce.pro.br -d onb-mkt.reforce.pro.br` e depois `certbot renew --dry-run`.
+- Arquivos-chave do workspace: Infra-LimaDev/Novo-Escopo/vps-dev/2026-03-30_plano_adequacao_vps_dev.md ; Infra-LimaDev/Novo-Escopo/vps-dev/2026-03-30_plano_acao_pos_ocorrencia_vps_dev.md ; Infra-LimaDev/Novo-Escopo/vps-dev/acessoweb.env.
+- Observacao: self-signed atual continua servindo para teste/local, mas dominio publico deve usar Let's Encrypt.
+- Check rapido de retomada: `systemctl is-active infra-entrada pm2-root nginx fail2ban && pm2 list && nginx -t`.
