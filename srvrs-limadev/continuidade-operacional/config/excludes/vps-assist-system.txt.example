@@ -1,0 +1,14 @@
+/root/.cache
+/root/.hermes/checkpoints
+/root/.hermes/hermes-agent/.git
+/root/.hermes/hermes-agent/node_modules
+/root/.hermes/hermes-agent/ui-tui
+/root/.hermes/hermes-agent/venv
+/root/.hermes/hermes-agent/web
+/root/.hermes/logs
+/root/.hermes/node
+/root/.hermes/sessions/*/node_modules
+/root/.hermes/state-snapshots
+/root/.hermes/venv
+/root/.npm
+/root/.paperclip/**/node_modules

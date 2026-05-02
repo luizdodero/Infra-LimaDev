@@ -1,0 +1,12 @@
+[Unit]
+Description=LimaDev Backup Drill Timer (%i)
+
+[Timer]
+# Weekly drill by default
+OnCalendar=Sun *-*-* 03:30:00
+RandomizedDelaySec=300
+Persistent=true
+Unit=limadev-backup-drill@%i.service
+
+[Install]
+WantedBy=timers.target

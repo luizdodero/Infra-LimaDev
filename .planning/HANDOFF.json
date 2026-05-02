@@ -1,0 +1,65 @@
+{
+  "version": "1.1",
+  "timestamp": "2026-05-02T18:20:00-03:00",
+  "phase": "01",
+  "phase_name": "continuidade-operacional",
+  "phase_dir": ".planning/phases/01-continuidade-operacional",
+  "plan": 1,
+  "task": 6,
+  "total_tasks": 6,
+  "status": "completed",
+  "completed_tasks": [
+    {"id": 1, "name": "Criar modulo continuidade-operacional no repo", "status": "done", "commit": "pending"},
+    {"id": 2, "name": "Implementar scripts backup/restore/drill/install", "status": "done", "commit": "pending"},
+    {"id": 3, "name": "Criar templates systemd e runbooks", "status": "done", "commit": "pending"},
+    {"id": 4, "name": "Adicionar heartbeat Hermes/Telegram", "status": "done", "commit": "pending"},
+    {"id": 5, "name": "Aplicar configuracao no host vps-assist", "status": "done", "commit": "pending"},
+    {"id": 6, "name": "Validar primeiro backup real + drill + evidencia", "status": "done", "commit": "pending"}
+  ],
+  "remaining_tasks": [
+    {
+      "id": 7,
+      "name": "Executar sprint autonoma para hosts restantes",
+      "status": "ready",
+      "document": "srvrs-limadev/continuidade-operacional/SPRINT_2026-05-02_IMPLANTACAO_AUTONOMA.md"
+    }
+  ],
+  "blockers": [],
+  "human_actions_pending": [
+    {
+      "action": "Rotacionar/revogar chave ampla usada no bootstrap Backblaze apos rollout completo",
+      "context": "A operacao corrente usa chave restrita ao bucket. A chave ampla deve ser removida ao final da sprint autonoma.",
+      "blocking": false
+    },
+    {
+      "action": "Guardar copia criptografada atualizada do arquivo privado de credenciais no Google Drive",
+      "context": "O arquivo aberto continua fora do git em secure/limadev-backup-credentials.env.",
+      "blocking": false
+    }
+  ],
+  "decisions": [
+    {"decision": "Renomear o modulo para srvrs-limadev/continuidade-operacional", "rationale": "Evitar acoplamento a fornecedor e cobrir backup, restore, drill, heartbeat e evidencias.", "phase": "01"},
+    {"decision": "Usar Backblaze B2 como backend S3 compativel", "rationale": "Custo baixo, API S3 compativel, suporte documentado para Restic.", "phase": "01"},
+    {"decision": "Usar chave B2 restrita ao bucket para Restic", "rationale": "Menor privilegio: leitura, escrita, listagem e delete somente para operacao de backup/prune.", "phase": "01"},
+    {"decision": "Centralizar heartbeat e Telegram no vps-assist", "rationale": "Reduz espalhamento de segredos e permite detectar silencio operacional dos demais hosts.", "phase": "01"}
+  ],
+  "validated_outputs": [
+    "Bucket B2 privado limadev-backup criado",
+    "Repositorio Restic inicializado e restic check OK",
+    "Snapshot vps-assist db: 2ec26849",
+    "Snapshot vps-assist system_config: 13dcbb23",
+    "Drill vps-assist-db: PASS",
+    "Heartbeat vps-assist: ok",
+    "Telegram: ok",
+    "Timers limadev ativos no vps-assist"
+  ],
+  "tracked_files_expected": [
+    "srvrs-limadev/continuidade-operacional/**",
+    "srvrs-limadev/vps-assist/CONTINUIDADE_OPERACIONAL.md",
+    "srvrs-limadev/vps-assist/README.md",
+    "srvrs-limadev/vps-assist/ACESSOS.md",
+    "docs/superpowers/plans/2026-05-02-heartbeat-hermes.md"
+  ],
+  "next_action": "Executar a sprint autonoma de implantacao nos hosts restantes seguindo SPRINT_2026-05-02_IMPLANTACAO_AUTONOMA.md.",
+  "context_notes": "O worktree foi triado em 2026-05-02. O estado staged antigo foi preservado temporariamente antes da reorganizacao."
+}

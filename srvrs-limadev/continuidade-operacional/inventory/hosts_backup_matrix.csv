@@ -1,0 +1,6 @@
+host,role,criticality,rpo_target_hours,rto_target_hours,backup_classes,notes
+vps-assist,assistente_orquestracao,critical,6,4,db|app_data|system_config|ops_artifacts,prioridade_onda_1
+vps-prod,producao_servicos,critical,6,4,db|app_data|system_config|ops_artifacts,prioridade_onda_1
+vps-dev,staging_dev,high,12,8,app_data|system_config|repos|ops_artifacts,prioridade_onda_2
+mini-pc,edge_voz,medium,24,12,app_data|system_config|repos,prioridade_onda_2
+note-limdev,estacao_operacao,medium,24,12,repos|ops_artifacts|system_config,prioridade_onda_2

@@ -1,0 +1,18 @@
+# Caddy reverse proxy for vps-assist
+# Paperclip
+paperclip.vps-assist.limadev.internal {
+    reverse_proxy localhost:3100
+
+    encode gzip
+
+    # Security headers
+    header {
+        X-Content-Type-Options "nosniff"
+        X-Frame-Options "DENY"
+        Referrer-Policy "strict-origin-when-cross-origin"
+    }
+
+    # Only allow Tailscale/internal access
+    @blocked not remote_ip 100.64.0.0/10 127.0.0.0/8 10.0.0.0/8 172.16.0.0/12
+    respond @blocked 403
+}

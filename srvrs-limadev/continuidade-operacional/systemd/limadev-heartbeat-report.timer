@@ -1,0 +1,11 @@
+[Unit]
+Description=LimaDev Heartbeat Report Timer
+
+[Timer]
+OnCalendar=*-*-* 07:30:00
+RandomizedDelaySec=900
+Persistent=true
+Unit=limadev-heartbeat-report.service
+
+[Install]
+WantedBy=timers.target

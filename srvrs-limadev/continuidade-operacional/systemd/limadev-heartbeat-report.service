@@ -1,0 +1,14 @@
+[Unit]
+Description=LimaDev Heartbeat Report
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+User=root
+EnvironmentFile=-/etc/limadev/heartbeat.env
+ExecStart=/bin/bash -lc 'if [ "${HEARTBEAT_INGEST_MODE:-ssh}" = "local" ]; then /usr/local/bin/limadev-heartbeat-report.sh | /usr/local/bin/limadev-heartbeat-ingest; else /usr/local/bin/limadev-heartbeat-report.sh | ssh ${HEARTBEAT_INGEST_SSH_TARGET} ${HEARTBEAT_INGEST_COMMAND}; fi'
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=full
+ProtectHome=read-only

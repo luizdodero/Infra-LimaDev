@@ -1,0 +1,21 @@
+[Unit]
+Description=LimaDev Backup Job (%i)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+User=root
+EnvironmentFile=/etc/limadev/backup.env
+Environment=RESTIC_CACHE_DIR=/tmp/restic-cache
+ExecStart=/usr/local/bin/limadev-backup-job.sh --env /etc/limadev/backup.env --job-config /etc/limadev/jobs/%i.env
+Nice=10
+IOSchedulingClass=best-effort
+IOSchedulingPriority=7
+
+# Hardening
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=full
+ProtectHome=read-only
+ReadWritePaths=/var/log/limadev-backup /tmp

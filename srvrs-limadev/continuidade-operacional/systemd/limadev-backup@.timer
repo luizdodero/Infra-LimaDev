@@ -1,0 +1,12 @@
+[Unit]
+Description=LimaDev Backup Timer (%i)
+
+[Timer]
+# Critical baseline cadence: every 6 hours
+OnCalendar=*-*-* 00,06,12,18:10:00
+RandomizedDelaySec=120
+Persistent=true
+Unit=limadev-backup@%i.service
+
+[Install]
+WantedBy=timers.target

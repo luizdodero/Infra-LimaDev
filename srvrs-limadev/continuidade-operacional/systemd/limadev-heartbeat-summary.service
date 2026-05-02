@@ -1,0 +1,15 @@
+[Unit]
+Description=LimaDev Heartbeat Daily Summary
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+User=root
+EnvironmentFile=-/etc/limadev/heartbeat.env
+EnvironmentFile=-/etc/limadev/backup.env
+ExecStart=/bin/bash -lc '/usr/local/bin/limadev-heartbeat-daily-summary.sh'
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=full
+ReadWritePaths=/var/log/limadev-heartbeat /var/lib/limadev-heartbeats /tmp

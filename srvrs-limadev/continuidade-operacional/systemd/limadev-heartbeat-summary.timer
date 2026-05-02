@@ -1,0 +1,11 @@
+[Unit]
+Description=LimaDev Heartbeat Daily Summary Timer
+
+[Timer]
+OnCalendar=*-*-* 08:30:00
+RandomizedDelaySec=120
+Persistent=true
+Unit=limadev-heartbeat-summary.service
+
+[Install]
+WantedBy=timers.target
