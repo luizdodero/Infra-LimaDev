@@ -1,13 +1,13 @@
 {
   "version": "1.1",
-  "timestamp": "2026-05-02T18:20:00-03:00",
+  "timestamp": "2026-05-02T19:06:42-03:00",
   "phase": "01",
   "phase_name": "continuidade-operacional",
   "phase_dir": ".planning/phases/01-continuidade-operacional",
   "plan": 1,
   "task": 6,
   "total_tasks": 6,
-  "status": "completed",
+  "status": "paused-after-initial-rollout",
   "completed_tasks": [
     {"id": 1, "name": "Criar modulo continuidade-operacional no repo", "status": "done", "commit": "pending"},
     {"id": 2, "name": "Implementar scripts backup/restore/drill/install", "status": "done", "commit": "pending"},
@@ -19,12 +19,21 @@
   "remaining_tasks": [
     {
       "id": 7,
-      "name": "Executar sprint autonoma para hosts restantes",
-      "status": "ready",
+      "name": "Concluir sprint autonoma para hosts restantes",
+      "status": "in_progress",
       "document": "srvrs-limadev/continuidade-operacional/SPRINT_2026-05-02_IMPLANTACAO_AUTONOMA.md"
     }
   ],
-  "blockers": [],
+  "blockers": [
+    {
+      "host": "mini-pc",
+      "reason": "SSH funciona como limadev, mas sudo -n esta bloqueado; sem privilegio nao interativo para instalar stack em /etc, /usr/local/bin e systemd."
+    },
+    {
+      "host": "note-limdev",
+      "reason": "Porta 22 responde, mas chaves/usuarios testados nao autenticaram; porta 22022 recusou conexao."
+    }
+  ],
   "human_actions_pending": [
     {
       "action": "Rotacionar/revogar chave ampla usada no bootstrap Backblaze apos rollout completo",
@@ -51,7 +60,15 @@
     "Drill vps-assist-db: PASS",
     "Heartbeat vps-assist: ok",
     "Telegram: ok",
-    "Timers limadev ativos no vps-assist"
+    "Timers limadev ativos no vps-assist",
+    "Snapshot vps-prod db: 3152c22f",
+    "Snapshot vps-prod system_config: ea0ee8b1",
+    "Snapshot vps-prod app_data: 497183b7",
+    "Snapshot vps-dev db: 69b3ac14",
+    "Snapshot vps-dev system_config: 4b7305ef",
+    "Snapshot vps-dev repos: dc16cfc2",
+    "PIX no vps-dev tratado como desenvolvimento/teste incluido no backup geral; Pix Hub de producao fora do escopo Infra-LimaDev",
+    "Backblaze S3 latencia HTTP observada em ~0.37s-0.40s nos VPS de backup e throughput Restic efetivo em ~14-16 MiB/s nos jobs maiores"
   ],
   "tracked_files_expected": [
     "srvrs-limadev/continuidade-operacional/**",
@@ -60,6 +77,6 @@
     "srvrs-limadev/vps-assist/ACESSOS.md",
     "docs/superpowers/plans/2026-05-02-heartbeat-hermes.md"
   ],
-  "next_action": "Executar a sprint autonoma de implantacao nos hosts restantes seguindo SPRINT_2026-05-02_IMPLANTACAO_AUTONOMA.md.",
-  "context_notes": "O worktree foi triado em 2026-05-02. O estado staged antigo foi preservado temporariamente antes da reorganizacao."
+  "next_action": "Retomar pela secao Retomada Recomendada em srvrs-limadev/continuidade-operacional/SPRINT_2026-05-02_IMPLANTACAO_AUTONOMA_STATUS.md: rodar drill vps-prod-db, heartbeat manual vps-prod/vps-dev, ativar timers, rodar resumo no vps-assist e validar Telegram.",
+  "context_notes": "Pausa registrada em 2026-05-02 19:06:42 -0300. Backups iniciais de vps-prod e vps-dev concluidos. Nao ha timers ativos em vps-prod/vps-dev ainda. Worktree tem atualizacoes documentais pendentes."
 }
