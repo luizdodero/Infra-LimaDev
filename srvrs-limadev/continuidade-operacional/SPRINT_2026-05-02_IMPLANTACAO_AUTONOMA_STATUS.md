@@ -95,17 +95,17 @@
 
 ## Host: vps-dev
 
-- Resultado: PASS_PARCIAL
+- Resultado: PASS
 - Retomada: 2026-06-01
 - Acesso usado: Tailscale porta 22.
 - Jobs operacionais ativados:
   - `vps-dev-system`
   - `vps-dev-repos`
-- Job bloqueado/nao ativado:
-  - `vps-dev-db`
-- Motivo do bloqueio do `vps-dev-db`:
-  - o job depende do container `pix-postgres-1`, mas nao havia containers Docker rodando no `vps-dev` na retomada de 2026-06-01.
-  - para evitar falha recorrente, o timer de `vps-dev-db` nao foi ativado.
+- Classe retirada do escopo operacional em 2026-06-02:
+  - `vps-dev-db`.
+- Motivo da retirada:
+  - o banco local do `vps-dev` serve apenas para testes locais no VPS e nao e importante para continuidade operacional.
+  - para evitar alerta falso recorrente, o timer de `vps-dev-db` permanece nao ativado.
 - Snapshots validados em 2026-06-01:
   - `system_config`: `ee84a1a5`
   - `repos`: `3985b53b`
@@ -119,12 +119,12 @@
   - `limadev-backup@vps-dev-system.timer`
   - `limadev-backup@vps-dev-repos.timer`
   - `limadev-heartbeat-report.timer`
-- Timers propositalmente nao ativos:
+- Timers propositalmente nao ativos/fora de escopo:
   - `limadev-backup@vps-dev-db.timer`
 - Alertas:
   - nenhum failed unit apos ativacao dos timers validos.
 - Proxima acao:
-  - redefinir ou revalidar o job `vps-dev-db` quando o workload PIX/dev estiver ativo ou quando ficar decidido que essa classe nao faz mais parte do escopo do `vps-dev`.
+  - nenhuma para DB local do `vps-dev`; manter fora do escopo ate nova decisao explicita.
 
 ## Host: mini-pc
 
@@ -236,7 +236,7 @@
   - `vps-prod/app_data`: `1fef25ef`.
   - `vps-prod/db`: `509cc082`.
   - `vps-prod/system_config`: `cbbf1a75`.
-  - `vps-dev/db`: `69b3ac14`.
+  - `vps-dev/db`: `69b3ac14` (historico/fora de escopo ativo).
   - `vps-dev/repos`: `a0a880a2`.
   - `vps-dev/system_config`: `ee2d75b1`.
   - `note-limdev/system_config`: `fa7f47fa`.
@@ -265,8 +265,5 @@
 2. Ajustar estrategia de drill do `note-limdev` para hosts de estacao:
    - evitar `restic check --read-data-subset` longo dentro da janela operacional curta;
    - manter drill manual de restore como evidencia ate fechar a politica recorrente.
-3. Decidir/revalidar `vps-dev-db`:
-   - manter no escopo se o workload PIX/dev continuar relevante; ou
-   - redefinir/remover a classe `db` do escopo do `vps-dev` se ela nao for mais necessaria.
-4. Apos `mini-pc`, rodar novo summary no `vps-assist` buscando `Status geral: OK`.
-5. Revisar custo/tamanho do repositorio apos 7 dias de operacao com os novos jobs de `vps-prod` e os novos jobs de estacao.
+3. Apos `mini-pc`, rodar novo summary no `vps-assist` buscando `Status geral: OK`.
+4. Revisar custo/tamanho do repositorio apos 7 dias de operacao com os novos jobs de `vps-prod` e os novos jobs de estacao.

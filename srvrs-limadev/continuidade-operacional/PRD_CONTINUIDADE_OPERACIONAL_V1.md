@@ -30,7 +30,7 @@ Base operacional validada e expandida:
 - `vps-prod` operacional com backups de `db`, `app_data`, `system_config`, drill DB e heartbeat ativos;
 - `vps-prod-db` cobre PicFound, VoxGate, Camada 30 atendimento e Zammad via dumps logicos;
 - `vps-prod-app` cobre `/opt/limadev/camada30` e volumes relevantes de Zammad (`zammad-storage` e `zammad-backup`);
-- `vps-dev` reporta OK no heartbeat com snapshots para `db`, `repos` e `system_config`; ainda resta fechar decisao de escopo do DB conforme workload PIX/dev;
+- `vps-dev` reporta OK no heartbeat com backups ativos de `repos` e `system_config`; a classe `db` local foi retirada do escopo operacional porque serve apenas a testes locais no VPS;
 - `note-limdev` desbloqueado para implantacao: acesso validado como `luiz@100.123.108.43:22` com chave `/root/.ssh/id_note_opsbot`, `sudo -n` habilitado, stack instalada e snapshots iniciais de `system_config`, `repos` e `ops_artifacts` criados;
 - `note-limdev` teve `EXCLUDE_FILE` aplicado, drill manual de restore `system_config` validado, heartbeat recebido no `vps-assist` e timers de backup/heartbeat ativos;
 - scripts `backup_job.sh` e `heartbeat_report.sh` foram endurecidos contra falsos negativos de repositorio Restic, lock temporario no `forget/prune` e selecao incorreta do snapshot mais recente;
@@ -39,7 +39,6 @@ Base operacional validada e expandida:
 
 Pendencias de v1:
 
-- decidir/revalidar `vps-dev-db` conforme estado atual do workload PIX/dev;
 - implantar `mini-pc`;
 - ajustar a estrategia do drill systemd do `note-limdev` para hosts de estacao antes de ativar o timer de drill desse host;
 - executar drill de falha simulada apos todos os hosts reportarem;
@@ -114,7 +113,7 @@ Pendencias de v1:
 - [x] ativar `vps-dev` para `repos`, `system_config` e heartbeat;
 - [x] concluir `note-limdev`: ajuste de excludes, drill manual de restore, heartbeat e timers de backup/heartbeat;
 - [ ] ajustar/ativar timer de drill do `note-limdev` para hosts de estacao;
-- [ ] decidir/revalidar `vps-dev-db` conforme estado do workload PIX/dev.
+- [x] retirar `vps-dev-db` do escopo operacional; banco local do VPS e apenas ambiente de teste local.
 
 ### Onda 3
 

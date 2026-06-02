@@ -9,7 +9,7 @@ Implementacao inicial do plano de backup e recuperacao para a infraestrutura Lim
 - Hosts operacionais:
   - `vps-assist`: PASS, host central de ingestao/summary.
   - `vps-prod`: PASS, com backups de DB/app/system, drill de DB e heartbeat ativos.
-  - `vps-dev`: PASS, com backups de DB/repos/system e heartbeat reportando OK; manter decisao de escopo do DB conforme workload PIX/dev.
+  - `vps-dev`: PASS, com backups de `repos`/`system_config` e heartbeat reportando OK; `db` local ficou fora do escopo operacional por ser apenas ambiente de teste local.
   - `note-limdev`: PASS parcial controlado, com backups `system_config`, `repos` e `ops_artifacts`, heartbeat e timers de backup ativos; drill manual de restore do `system_config` validado.
 - Hosts pendentes/bloqueados:
   - `mini-pc`: bloqueado por falta de sudo nao interativo.
@@ -17,7 +17,6 @@ Implementacao inicial do plano de backup e recuperacao para a infraestrutura Lim
   - `vps-prod/db`: `509cc082`
   - `vps-prod/app_data`: `1fef25ef`
   - `vps-prod/system_config`: `cbbf1a75`
-  - `vps-dev/db`: `69b3ac14`
   - `vps-dev/repos`: `a0a880a2`
   - `vps-dev/system_config`: `ee2d75b1`
   - `note-limdev/system_config`: `fa7f47fa`
@@ -37,6 +36,7 @@ Implementacao inicial do plano de backup e recuperacao para a infraestrutura Lim
   - `vps-dev`: `limadev-backup@vps-dev-repos.timer`, `limadev-backup@vps-dev-system.timer`, `limadev-heartbeat-report.timer`.
   - `note-limdev`: `limadev-backup@note-limdev-system.timer`, `limadev-backup@note-limdev-repos.timer`, `limadev-backup@note-limdev-ops.timer`, `limadev-heartbeat-report.timer`.
 - Observacao operacional:
+  - o snapshot historico `vps-dev/db` (`69b3ac14`) permanece no repositorio Restic como evidencia antiga, mas nao faz parte dos jobs/timers ativos.
   - o drill systemd do `note-limdev` com `restic check --read-data-subset` excedeu a janela controlada; por isso foi substituido por drill manual de restore. O timer de drill do `note-limdev` ainda nao foi ativado ate ajustar a estrategia de check para hosts de estacao.
 
 ## Escopo
