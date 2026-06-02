@@ -301,6 +301,20 @@
   - prioridade: `medium`.
   - sem assignee e sem runs (`RUN_COUNT=0`), para nao iniciar processo automatico.
   - regra: nao executar `restic check --read-data-subset`, restore amplo, backup manual ou drill amplo de `ops_artifacts` sem autorizacao explicita de Luiz.
+- Autopilot recorrente criado no Multica do `vps-assist`:
+  - id: `f4171362-8ade-4e94-a5c3-e08fb689a81e`.
+  - titulo: `Solicitar janela de drill note-limdev`.
+  - modo: `create_issue`.
+  - status: `active`.
+  - template de issue: `Solicitar janela de drill note-limdev {{date}}`.
+  - prioridade das issues: `medium`.
+  - agente configurado: `Dev-ops` (`5732a762-ec96-481b-87b0-2488d24288f1`).
+  - trigger: `0af74d04-8ea4-476b-be12-f8ce96ce7ee6`.
+  - cron: `0 9 5 * *`.
+  - timezone: `America/Sao_Paulo`.
+  - proxima criacao prevista: `2026-06-05T12:00:00Z`.
+  - runs no momento da criacao: `0`; nenhuma issue foi criada imediatamente e nenhum drill foi iniciado.
+  - objetivo: criar recorrencia de aprovacao humana; a execucao continua dependendo de autorizacao explicita de Luiz.
 - `mini-pc`:
   - locks Restic obsoletos removidos (`restic unlock`: 2 locks).
   - jobs `mini-pc-system`, `mini-pc-repos` e `mini-pc-ops` reexecutados sequencialmente com sucesso.
@@ -321,6 +335,6 @@
 
 ## Retomada Recomendada
 
-1. Aguardar Luiz autorizar a janela da issue Multica `LIM-40` para drill leve/amostral do `note-limdev`.
+1. Acompanhar a proxima issue criada pelo autopilot Multica `f4171362-8ade-4e94-a5c3-e08fb689a81e` e aguardar Luiz autorizar a janela para drill leve/amostral do `note-limdev`.
 2. Revisar custo/tamanho do repositorio apos 7 dias de operacao com os novos jobs de `vps-prod`, `mini-pc` e `note-limdev`.
 3. Manter monitoramento do summary diario no `vps-assist`; estado buscado nesta etapa permanece `Status geral: OK`.

@@ -37,12 +37,13 @@ Base operacional validada e expandida:
 - `note-limdev` teve `EXCLUDE_FILE` aplicado, drill manual de restore `system_config` validado, heartbeat recebido no `vps-assist` e timers de backup/heartbeat ativos;
 - scripts `backup_job.sh` e `heartbeat_report.sh` foram endurecidos contra falsos negativos de repositorio Restic, lock temporario no `forget/prune` e selecao incorreta do snapshot mais recente; quando o snapshot ja foi criado, lock no `forget/prune` passa a ser aviso operacional em vez de falha do backup;
 - `note-limdev` e a unica estacao de trabalho no escopo atual; drill pesado/restore amplo ficou sob autorizacao explicita em Multica `LIM-40`, status `in_review`, prioridade `medium`, sem execucao automatica;
+- recorrencia de aprovacao do `note-limdev` configurada no Multica do `vps-assist`: autopilot `f4171362-8ade-4e94-a5c3-e08fb689a81e`, modo `create_issue`, cron `0 9 5 * *`, timezone `America/Sao_Paulo`, para criar mensalmente uma issue de revisao sem iniciar o drill automaticamente;
 - Telegram/summary diario permanecem ativos no `vps-assist`;
 - heartbeat de 2026-06-02: `vps-assist`, `vps-prod`, `vps-dev`, `mini-pc` e `note-limdev` em `ok`; `Status geral: OK`.
 
 Pendencias de v1:
 
-- aguardar autorizacao de janela no Multica `LIM-40` para drill leve/amostral do `note-limdev`;
+- acompanhar a issue mensal criada pelo autopilot Multica `f4171362-8ade-4e94-a5c3-e08fb689a81e` e aguardar autorizacao de janela para drill leve/amostral do `note-limdev`;
 - executar drill de falha simulada apos todos os hosts reportarem;
 - rotacionar/revogar chave ampla usada no bootstrap e manter somente chave restrita.
 
@@ -115,7 +116,8 @@ Pendencias de v1:
 - [x] ativar `vps-dev` para `repos`, `system_config` e heartbeat;
 - [x] concluir `note-limdev`: ajuste de excludes, drill manual de restore, heartbeat e timers de backup/heartbeat;
 - [x] ativar timer recorrente de drill do `mini-pc` como servidor;
-- [ ] executar drill leve/amostral do `note-limdev` somente apos autorizacao de janela no Multica `LIM-40`;
+- [x] criar autopilot Multica mensal para solicitar autorizacao de janela do drill `note-limdev` sem execucao automatica;
+- [ ] executar drill leve/amostral do `note-limdev` somente apos autorizacao de janela humana;
 - [x] retirar `vps-dev-db` do escopo operacional; banco local do VPS e apenas ambiente de teste local.
 
 ### Onda 3

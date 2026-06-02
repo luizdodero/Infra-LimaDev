@@ -46,6 +46,7 @@ Implementacao inicial do plano de backup e recuperacao para a infraestrutura Lim
 - Observacao operacional:
   - o snapshot historico `vps-dev/db` (`69b3ac14`) permanece no repositorio Restic como evidencia antiga, mas nao faz parte dos jobs/timers ativos.
   - `note-limdev` e a unica estacao de trabalho no escopo atual; drill pesado/restore amplo ficou sob autorizacao explicita em Multica `LIM-40`, status `in_review`, prioridade `medium`.
+  - recorrencia de aprovacao do `note-limdev`: autopilot Multica `Solicitar janela de drill note-limdev` (`f4171362-8ade-4e94-a5c3-e08fb689a81e`), modo `create_issue`, cron `0 9 5 * *`, timezone `America/Sao_Paulo`, proxima criacao prevista `2026-06-05T12:00:00Z`; cria issue de revisao, nao executa drill automaticamente.
   - `backup_job.sh` foi ajustado para tratar lock de `forget/prune` como aviso quando o snapshot ja foi criado, evitando marcar backup bem-sucedido como falha por manutencao concorrente do repositorio.
 
 ## Escopo
