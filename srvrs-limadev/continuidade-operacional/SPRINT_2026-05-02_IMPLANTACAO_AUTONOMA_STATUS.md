@@ -129,13 +129,20 @@
 ## Host: mini-pc
 
 - Resultado: BLOCKED
-- Estado herdado da pausa anterior:
-  - acesso SSH funciona como `limadev`.
-  - `sudo -n` bloqueado; sem privilegio nao interativo para instalar stack em `/etc`, `/usr/local/bin` e systemd.
-- Status no summary de 2026-06-01:
+- Estado revalidado em 2026-06-02 02:27 -0300:
+  - acesso SSH funciona como `limadev@100.87.104.42`, porta `22022`, chave `/root/.ssh/id_mini_pc_limalab`.
+  - `sudo -n true` ainda falha com `sudo: a password is required`; sem privilegio nao interativo para instalar stack em `/etc`, `/usr/local/bin` e systemd.
+- Status no summary de 2026-06-02:
   - `ATENCAO` por ausencia de heartbeat.
 - Proxima acao:
   - liberar sudo nao interativo para implantacao ou executar instalacao assistida.
+  - comando recomendado para executar no proprio `mini-pc`, com senha sudo uma vez:
+    ```bash
+    printf '%s\n' 'limadev ALL=(ALL) NOPASSWD:ALL' | sudo tee /etc/sudoers.d/90-limadev-automation >/dev/null
+    sudo chmod 0440 /etc/sudoers.d/90-limadev-automation
+    sudo visudo -cf /etc/sudoers.d/90-limadev-automation
+    sudo -n true && echo SUDO_OK
+    ```
 
 ## Host: note-limdev
 
