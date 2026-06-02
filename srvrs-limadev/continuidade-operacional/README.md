@@ -48,6 +48,7 @@ Implementacao inicial do plano de backup e recuperacao para a infraestrutura Lim
   - `note-limdev` e a unica estacao de trabalho no escopo atual; drill pesado/restore amplo ficou sob autorizacao explicita em Multica `LIM-40`, status `in_review`, prioridade `medium`.
   - recorrencia de aprovacao do `note-limdev`: autopilot Multica `Solicitar janela de drill note-limdev` (`f4171362-8ade-4e94-a5c3-e08fb689a81e`), modo `create_issue`, cron `0 9 5 * *`, timezone `America/Sao_Paulo`, proxima criacao prevista `2026-06-05T12:00:00Z`; cria issue de revisao, nao executa drill automaticamente.
   - `backup_job.sh` foi ajustado para tratar lock de `forget/prune` como aviso quando o snapshot ja foi criado, evitando marcar backup bem-sucedido como falha por manutencao concorrente do repositorio.
+  - pausa operacional registrada em `SPRINT_2026-05-02_IMPLANTACAO_AUTONOMA_STATUS.md` em 2026-06-02 13:32 -0300; proximos passos: acompanhar autopilot Multica de 05/06, executar drill do `note-limdev` somente com janela aprovada e revisar custo/tamanho do repositorio apos 7 dias de operacao.
 
 ## Escopo
 

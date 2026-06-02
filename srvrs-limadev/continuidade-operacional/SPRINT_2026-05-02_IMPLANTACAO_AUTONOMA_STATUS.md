@@ -163,8 +163,8 @@
   - `limadev-backup@mini-pc-repos.timer`.
   - `limadev-backup@mini-pc-ops.timer`.
   - `limadev-heartbeat-report.timer`.
-- Timer ainda nao ativado:
-  - drill recorrente de estacao, ate ajustar estrategia de check/drill para janelas curtas.
+- Drill recorrente:
+  - `limadev-backup-drill@mini-pc-system.timer` ativado em 2026-06-02 apos reclassificacao do `mini-pc` como servidor.
 - Saude do host:
   - `systemctl is-system-running`: `running`.
   - failed units: nenhum.
@@ -333,8 +333,25 @@
   - `restic snapshots --json`: 53 snapshots.
   - `mini-pc`: 6 snapshots, ultimo em `2026-06-02T13:48:44.747498607Z`.
 
+## Pausa operacional 2026-06-02 13:32 -0300
+
+- Motivo: pausa solicitada por Luiz apos fechamento das configuracoes de backup.
+- Estado seguro confirmado antes da pausa:
+  - repo `/home/opsbot/projetos/Infra-LimaDev` em `main`, sincronizado com `origin/main` antes deste registro de pausa.
+  - summary mais recente no `vps-assist`: `/var/log/limadev-heartbeat/daily-summary-2026-06-02.md` com `Status geral: OK`.
+  - heartbeats do dia recebidos para os 5 hosts: `vps-assist`, `vps-prod`, `vps-dev`, `mini-pc`, `note-limdev`.
+  - nenhum host pendente/bloqueado no escopo atual de configuracao de backup.
+- Fechamento do bloco:
+  - implantacao/configuracao de backups Restic, backend S3/B2, jobs, timers, heartbeat e summary esta concluida para os 5 hosts do escopo atual.
+  - `mini-pc` permanece como servidor com drill recorrente de `system_config` ativo.
+  - `note-limdev` permanece como estacao de trabalho: backups e heartbeat automaticos, mas drills pesados/restore amplo somente mediante autorizacao explicita em janela aprovada.
+  - Multica no `vps-assist` permanece como controle de aprovacao para o drill do `note-limdev` via issue `LIM-40` e autopilot `f4171362-8ade-4e94-a5c3-e08fb689a81e`.
+- Nao ha processo operacional em execucao deixado propositalmente em foreground/background por esta pausa.
+
 ## Retomada Recomendada
 
-1. Acompanhar a proxima issue criada pelo autopilot Multica `f4171362-8ade-4e94-a5c3-e08fb689a81e` e aguardar Luiz autorizar a janela para drill leve/amostral do `note-limdev`.
-2. Revisar custo/tamanho do repositorio apos 7 dias de operacao com os novos jobs de `vps-prod`, `mini-pc` e `note-limdev`.
-3. Manter monitoramento do summary diario no `vps-assist`; estado buscado nesta etapa permanece `Status geral: OK`.
+1. Conferir no inicio da proxima sessao: `git status --short --branch`, ultimo summary diario no `vps-assist` e arquivos em `/var/lib/limadev-heartbeats/$(date +%F)/`.
+2. Acompanhar a primeira issue criada pelo autopilot Multica `f4171362-8ade-4e94-a5c3-e08fb689a81e` em 2026-06-05 09:00 BRT; se criada corretamente, apenas aguardar autorizacao de Luiz para uma janela de drill leve/amostral do `note-limdev`.
+3. Se Luiz autorizar janela do `note-limdev`, seguir o roteiro controlado: validar SSH/sudo, confirmar ausencia de Restic ativo, rodar restore amostral leve de `system_config`, registrar evidencias e nao executar `ops_artifacts` amplo sem aprovacao separada.
+4. Revisar custo/tamanho do repositorio apos 7 dias de operacao com os novos jobs de `vps-prod`, `mini-pc` e `note-limdev`.
+5. Manter monitoramento do summary diario no `vps-assist`; estado buscado nesta etapa permanece `Status geral: OK`.
