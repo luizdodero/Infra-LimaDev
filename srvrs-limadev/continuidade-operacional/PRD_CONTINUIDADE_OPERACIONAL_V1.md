@@ -25,22 +25,23 @@ Base operacional validada e expandida:
 
 - bucket remoto privado `limadev-backup` criado no Backblaze B2;
 - chave de aplicacao restrita ao bucket criada para uso Restic/S3;
-- repositorio Restic inicializado; `restic snapshots --json` no `vps-assist` retornou 39 snapshots em 2026-06-02;
+- repositorio Restic inicializado; `restic snapshots --json` no `vps-assist` retornou 42 snapshots em 2026-06-02;
 - `vps-assist` operacional como host central de ingestao/summary, com backups, drill DB e heartbeat ativos;
 - `vps-prod` operacional com backups de `db`, `app_data`, `system_config`, drill DB e heartbeat ativos;
 - `vps-prod-db` cobre PicFound, VoxGate, Camada 30 atendimento e Zammad via dumps logicos;
 - `vps-prod-app` cobre `/opt/limadev/camada30` e volumes relevantes de Zammad (`zammad-storage` e `zammad-backup`);
 - `vps-dev` reporta OK no heartbeat com backups ativos de `repos` e `system_config`; a classe `db` local foi retirada do escopo operacional porque serve apenas a testes locais no VPS;
+- `mini-pc` desbloqueado para implantacao: acesso validado como `limadev@100.87.104.42:22022` com chave `/root/.ssh/id_mini_pc_limalab`, `sudo -n` habilitado, stack instalada e snapshots iniciais de `system_config`, `repos` e `ops_artifacts` criados;
+- `mini-pc` teve exclude aplicado, drill manual de restore `system_config` validado, heartbeat recebido no `vps-assist` e timers de backup/heartbeat ativos;
 - `note-limdev` desbloqueado para implantacao: acesso validado como `luiz@100.123.108.43:22` com chave `/root/.ssh/id_note_opsbot`, `sudo -n` habilitado, stack instalada e snapshots iniciais de `system_config`, `repos` e `ops_artifacts` criados;
 - `note-limdev` teve `EXCLUDE_FILE` aplicado, drill manual de restore `system_config` validado, heartbeat recebido no `vps-assist` e timers de backup/heartbeat ativos;
 - scripts `backup_job.sh` e `heartbeat_report.sh` foram endurecidos contra falsos negativos de repositorio Restic, lock temporario no `forget/prune` e selecao incorreta do snapshot mais recente;
 - Telegram/summary diario permanecem ativos no `vps-assist`;
-- heartbeat de 2026-06-02: `vps-assist`, `vps-prod`, `vps-dev` e `note-limdev` em `ok`; `mini-pc` em atencao.
+- heartbeat de 2026-06-02: `vps-assist`, `vps-prod`, `vps-dev`, `mini-pc` e `note-limdev` em `ok`; `Status geral: OK`.
 
 Pendencias de v1:
 
-- implantar `mini-pc`;
-- ajustar a estrategia do drill systemd do `note-limdev` para hosts de estacao antes de ativar o timer de drill desse host;
+- ajustar a estrategia do drill systemd dos hosts de estacao (`mini-pc` e `note-limdev`) antes de ativar timers de drill recorrente nesses hosts;
 - executar drill de falha simulada apos todos os hosts reportarem;
 - rotacionar/revogar chave ampla usada no bootstrap e manter somente chave restrita.
 

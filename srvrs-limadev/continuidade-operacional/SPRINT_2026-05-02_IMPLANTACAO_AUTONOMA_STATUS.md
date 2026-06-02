@@ -6,7 +6,7 @@
 - Inicio: 2026-05-02 18:34:48 -0300
 - Pausa anterior: 2026-05-02 19:06:42 -0300
 - Retomada operacional: 2026-06-01 19:26:17 -0300
-- Estado geral: PAUSADO_COM_VPS_PROD_E_VPS_DEV_OPERACIONAIS_E_NOTE_PARCIAL
+- Estado geral: PASS_COM_5_HOSTS_NO_SUMMARY_OK
 - Host central de ingestao/summary: `vps-assist`
 
 ## Preflight
@@ -128,21 +128,46 @@
 
 ## Host: mini-pc
 
-- Resultado: BLOCKED
-- Estado revalidado em 2026-06-02 02:27 -0300:
+- Resultado: PASS
+- Estado revalidado em 2026-06-02 02:44 -0300:
   - acesso SSH funciona como `limadev@100.87.104.42`, porta `22022`, chave `/root/.ssh/id_mini_pc_limalab`.
-  - `sudo -n true` ainda falha com `sudo: a password is required`; sem privilegio nao interativo para instalar stack em `/etc`, `/usr/local/bin` e systemd.
-- Status no summary de 2026-06-02:
-  - `ATENCAO` por ausencia de heartbeat.
-- Proxima acao:
-  - liberar sudo nao interativo para implantacao ou executar instalacao assistida.
-  - comando recomendado para executar no proprio `mini-pc`, com senha sudo uma vez:
-    ```bash
-    printf '%s\n' 'limadev ALL=(ALL) NOPASSWD:ALL' | sudo tee /etc/sudoers.d/90-limadev-automation >/dev/null
-    sudo chmod 0440 /etc/sudoers.d/90-limadev-automation
-    sudo visudo -cf /etc/sudoers.d/90-limadev-automation
-    sudo -n true && echo SUDO_OK
-    ```
+  - `sudo -n true`: PASS apos liberacao de sudo nao interativo para `limadev`.
+- Stack instalada/atualizada em 2026-06-02:
+  - `restic`, `rclone`, `curl`, `jq` instalados.
+  - scripts instalados em `/usr/local/bin/limadev-*`.
+  - units systemd instaladas em `/etc/systemd/system/limadev-*`.
+  - configs copiadas para `/etc/limadev` sem imprimir segredos.
+  - backup timestampado dos configs pre-alteracao em `/var/backups/limadev-config-snapshots/20260602-054433`.
+  - `apt-get update` exigiu desabilitar temporariamente sources Zabbix durante a instalacao por `Hash Sum incorreto`; sources restauradas no `trap EXIT`.
+- Jobs criados:
+  - `mini-pc-system` (`system_config`): `/etc`, `/home/limadev/.ssh`.
+  - `mini-pc-repos` (`repos`): `/home/limadev/LimaDev-Works`, `/home/limadev/zabbix-mvp`, `/home/limadev/portaria-ia-mvp`.
+  - `mini-pc-ops` (`ops_artifacts`): `/home/limadev/logs`, `/home/limadev/.config`.
+- Ajustes de exclude:
+  - `EXCLUDE_FILE="/etc/limadev/excludes/mini-pc-common.txt"` aplicado em `/etc/limadev/backup.env`.
+  - excludes cobrem caches, `.vscode-server`, `.venv`, `node_modules`, `__pycache__` e diretórios de build.
+- Snapshots validados:
+  - `system_config`: `ca549b06`.
+  - `repos`: `256c7e98`.
+  - `ops_artifacts`: `089725be`.
+- Drill:
+  - drill manual de restore do `system_config`: PASS.
+  - relatorio: `/var/log/limadev-backup/drill-mini-pc-system-manual-20260602-054914.md`.
+  - arquivos restaurados: 909.
+- Heartbeat:
+  - `limadev-heartbeat-report.service`: PASS.
+  - arquivo recebido no `vps-assist`: `/var/lib/limadev-heartbeats/2026-06-02/mini-pc.json`.
+  - status: `ok`.
+- Timers ativos no `mini-pc`:
+  - `limadev-backup@mini-pc-system.timer`.
+  - `limadev-backup@mini-pc-repos.timer`.
+  - `limadev-backup@mini-pc-ops.timer`.
+  - `limadev-heartbeat-report.timer`.
+- Timer ainda nao ativado:
+  - drill recorrente de estacao, ate ajustar estrategia de check/drill para janelas curtas.
+- Saude do host:
+  - `systemctl is-system-running`: `running`.
+  - failed units: nenhum.
 
 ## Host: note-limdev
 
@@ -210,28 +235,32 @@
 
 ## Consolidacao 2026-06-02
 
-- `restic snapshots --json` no `vps-assist`: 39 snapshots.
+- `restic snapshots --json` no `vps-assist`: 42 snapshots.
 - Summary do `vps-assist` gerado em `/var/log/limadev-heartbeat/daily-summary-2026-06-02.md`.
-- Status geral do summary: `ATENCAO` apenas por `mini-pc`.
+- Status geral do summary: `OK`.
 - Hosts OK no summary:
   - `vps-assist`
   - `vps-prod`
   - `vps-dev`
+  - `mini-pc`
   - `note-limdev`
 - Hosts em atencao no summary:
-  - `mini-pc`
+  - nenhum.
 - Hosts em falha:
   - nenhum.
-- Saude systemd verificada em `vps-assist`, `vps-prod`, `vps-dev` e `note-limdev`:
+- Saude systemd verificada em `vps-assist`, `vps-prod`, `vps-dev`, `mini-pc` e `note-limdev`:
   - `systemctl is-system-running`: `running`.
-  - failed units: nenhum.
+  - failed units: nenhum relevante.
 - Correcoes aplicadas e validadas:
   - `backup_job.sh`: nao tenta `restic init` quando o repositorio ja existe mas `restic snapshots` falhou transitoriamente; retry no `forget/prune` quando ha lock temporario.
   - `heartbeat_report.sh`: snapshot mais recente selecionado por maior timestamp no JSON do Restic.
-  - scripts atualizados em `vps-dev`, `vps-prod`, `vps-assist` e `note-limdev` com backup previo em `/etc/limadev/config-backups/`.
+  - scripts atualizados em `vps-dev`, `vps-prod`, `vps-assist`, `mini-pc` e `note-limdev` com backup previo em `/etc/limadev/config-backups/` ou `/var/backups/limadev-config-snapshots/` conforme host.
 - Jobs reexecutados apos correcao:
   - `vps-prod-db`: PASS, snapshot `509cc082`.
   - `vps-dev-repos`: PASS, snapshot `a0a880a2`.
+  - `mini-pc-system`: PASS, snapshot `ca549b06`.
+  - `mini-pc-ops`: PASS, snapshot `089725be`.
+  - `mini-pc-repos`: PASS, snapshot `256c7e98`.
 - Snapshots reportados no heartbeat apos correcao do parser:
   - `vps-prod/app_data`: `1fef25ef`.
   - `vps-prod/db`: `509cc082`.
@@ -239,6 +268,9 @@
   - `vps-dev/db`: `69b3ac14` (historico/fora de escopo ativo).
   - `vps-dev/repos`: `a0a880a2`.
   - `vps-dev/system_config`: `ee2d75b1`.
+  - `mini-pc/system_config`: `ca549b06`.
+  - `mini-pc/repos`: `256c7e98`.
+  - `mini-pc/ops_artifacts`: `089725be`.
   - `note-limdev/system_config`: `fa7f47fa`.
   - `note-limdev/repos`: `e95b4ee5`.
   - `note-limdev/ops_artifacts`: `94dd289a`.
@@ -259,11 +291,8 @@
 
 ## Retomada Recomendada
 
-1. Liberar implantacao do `mini-pc`:
-   - sudo nao interativo; ou
-   - janela assistida para instalar stack e timers.
-2. Ajustar estrategia de drill do `note-limdev` para hosts de estacao:
+1. Ajustar estrategia de drill recorrente para hosts de estacao (`mini-pc` e `note-limdev`):
    - evitar `restic check --read-data-subset` longo dentro da janela operacional curta;
    - manter drill manual de restore como evidencia ate fechar a politica recorrente.
-3. Apos `mini-pc`, rodar novo summary no `vps-assist` buscando `Status geral: OK`.
-4. Revisar custo/tamanho do repositorio apos 7 dias de operacao com os novos jobs de `vps-prod` e os novos jobs de estacao.
+2. Revisar custo/tamanho do repositorio apos 7 dias de operacao com os novos jobs de `vps-prod`, `mini-pc` e `note-limdev`.
+3. Manter monitoramento do summary diario no `vps-assist`; estado buscado nesta etapa foi alcancado com `Status geral: OK`.

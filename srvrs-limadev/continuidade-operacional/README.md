@@ -5,39 +5,46 @@ Implementacao inicial do plano de backup e recuperacao para a infraestrutura Lim
 ## Status atual - 2026-06-02
 
 - Backend remoto: Backblaze B2, bucket privado `limadev-backup`.
-- Repositorio Restic: inicializado; `restic snapshots --json` no `vps-assist` retornou 39 snapshots em 2026-06-02.
+- Repositorio Restic: inicializado; `restic snapshots --json` no `vps-assist` retornou 42 snapshots em 2026-06-02.
 - Hosts operacionais:
   - `vps-assist`: PASS, host central de ingestao/summary.
   - `vps-prod`: PASS, com backups de DB/app/system, drill de DB e heartbeat ativos.
   - `vps-dev`: PASS, com backups de `repos`/`system_config` e heartbeat reportando OK; `db` local ficou fora do escopo operacional por ser apenas ambiente de teste local.
+  - `mini-pc`: PASS, com backups `system_config`, `repos` e `ops_artifacts`, heartbeat e timers de backup ativos; drill manual de restore do `system_config` validado.
   - `note-limdev`: PASS parcial controlado, com backups `system_config`, `repos` e `ops_artifacts`, heartbeat e timers de backup ativos; drill manual de restore do `system_config` validado.
 - Hosts pendentes/bloqueados:
-  - `mini-pc`: bloqueado por falta de sudo nao interativo.
+  - nenhum no escopo atual.
 - Snapshots recentes validados:
   - `vps-prod/db`: `509cc082`
   - `vps-prod/app_data`: `1fef25ef`
   - `vps-prod/system_config`: `cbbf1a75`
   - `vps-dev/repos`: `a0a880a2`
   - `vps-dev/system_config`: `ee2d75b1`
+  - `mini-pc/system_config`: `ca549b06`
+  - `mini-pc/repos`: `256c7e98`
+  - `mini-pc/ops_artifacts`: `089725be`
   - `note-limdev/system_config`: `fa7f47fa`
   - `note-limdev/repos`: `e95b4ee5`
   - `note-limdev/ops_artifacts`: `94dd289a`
 - Drill validado:
   - `vps-assist-db`: PASS recorrente.
   - `vps-prod-db`: PASS em `2026-06-01 19:21:51 -0300`.
+  - `mini-pc-system`: PASS manual em `/var/log/limadev-backup/drill-mini-pc-system-manual-20260602-054914.md`.
   - `note-limdev-system`: PASS manual em `/var/log/limadev-backup/drill-note-limdev-system-manual-20260602-010904.md`.
 - Telegram: validado com envio real previamente; summary diario segue ativo no `vps-assist`.
 - Heartbeat no summary de 2026-06-02:
-  - OK: `vps-assist`, `vps-prod`, `vps-dev`, `note-limdev`.
-  - ATENCAO: `mini-pc`.
+  - OK: `vps-assist`, `vps-prod`, `vps-dev`, `mini-pc`, `note-limdev`.
+  - ATENCAO: nenhum.
+  - Status geral: OK.
 - Timers ativos:
   - `vps-assist`: backups, drill DB, heartbeat report e summary.
   - `vps-prod`: `limadev-backup@vps-prod-db.timer`, `limadev-backup@vps-prod-app.timer`, `limadev-backup@vps-prod-system.timer`, `limadev-backup-drill@vps-prod-db.timer`, `limadev-heartbeat-report.timer`.
   - `vps-dev`: `limadev-backup@vps-dev-repos.timer`, `limadev-backup@vps-dev-system.timer`, `limadev-heartbeat-report.timer`.
+  - `mini-pc`: `limadev-backup@mini-pc-system.timer`, `limadev-backup@mini-pc-repos.timer`, `limadev-backup@mini-pc-ops.timer`, `limadev-heartbeat-report.timer`.
   - `note-limdev`: `limadev-backup@note-limdev-system.timer`, `limadev-backup@note-limdev-repos.timer`, `limadev-backup@note-limdev-ops.timer`, `limadev-heartbeat-report.timer`.
 - Observacao operacional:
   - o snapshot historico `vps-dev/db` (`69b3ac14`) permanece no repositorio Restic como evidencia antiga, mas nao faz parte dos jobs/timers ativos.
-  - o drill systemd do `note-limdev` com `restic check --read-data-subset` excedeu a janela controlada; por isso foi substituido por drill manual de restore. O timer de drill do `note-limdev` ainda nao foi ativado ate ajustar a estrategia de check para hosts de estacao.
+  - os drills systemd recorrentes de hosts de estacao ainda nao foram ativados; `mini-pc` e `note-limdev` usam evidencia inicial por drill manual de restore ate ajustar estrategia de check para janelas curtas.
 
 ## Escopo
 
