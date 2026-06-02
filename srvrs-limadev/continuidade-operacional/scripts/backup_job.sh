@@ -157,8 +157,12 @@ fi
 log "Starting backup host=${HOST} class=${CLASS} repo=${RESTIC_REPOSITORY}"
 
 if ! restic snapshots >/dev/null 2>&1; then
-  log "Repository not initialized, running restic init"
-  restic init || fatal "restic init failed"
+  if restic cat config >/dev/null 2>&1; then
+    log "WARN: restic snapshots preflight failed, but repository config exists; proceeding"
+  else
+    log "Repository not initialized, running restic init"
+    restic init || fatal "restic init failed"
+  fi
 fi
 
 declare -a VALID_PATHS
@@ -205,12 +209,30 @@ BACKUP_CMD+=("${VALID_PATHS[@]}")
 "${BACKUP_CMD[@]}" || fatal "restic backup command failed"
 
 if [[ "${DRY_RUN}" == "0" ]]; then
-  restic forget --prune \
-    --host "${HOST}" \
-    --tag "class:${CLASS}" \
-    --keep-daily "${KEEP_DAILY:-7}" \
-    --keep-weekly "${KEEP_WEEKLY:-4}" \
-    --keep-monthly "${KEEP_MONTHLY:-6}" || fatal "restic forget/prune failed"
+  forget_output=""
+  forget_ok="0"
+  for attempt in 1 2 3; do
+    if forget_output="$(restic forget --prune \
+      --host "${HOST}" \
+      --tag "class:${CLASS}" \
+      --keep-daily "${KEEP_DAILY:-7}" \
+      --keep-weekly "${KEEP_WEEKLY:-4}" \
+      --keep-monthly "${KEEP_MONTHLY:-6}" 2>&1)"; then
+      printf '%s\n' "${forget_output}"
+      forget_ok="1"
+      break
+    fi
+
+    printf '%s\n' "${forget_output}"
+    if grep -qi 'repository is already locked\|unable to create lock' <<<"${forget_output}" && [[ "${attempt}" != "3" ]]; then
+      log "WARN: restic forget/prune locked; retrying attempt $((attempt + 1))/3"
+      sleep $((attempt * 20))
+      continue
+    fi
+    break
+  done
+
+  [[ "${forget_ok}" == "1" ]] || fatal "restic forget/prune failed"
 fi
 
 run_hook "${POST_BACKUP_HOOK:-}" "POST_BACKUP_HOOK"

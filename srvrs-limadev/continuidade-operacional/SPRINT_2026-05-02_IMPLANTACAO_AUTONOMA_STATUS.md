@@ -4,138 +4,262 @@
 
 - Sprint: `SPRINT_2026-05-02_IMPLANTACAO_AUTONOMA.md`
 - Inicio: 2026-05-02 18:34:48 -0300
-- Pausa: 2026-05-02 19:06:42 -0300
-- Estado geral: PAUSADO_COM_BACKUPS_INICIAIS
-- Host base validado: `vps-assist`
+- Pausa anterior: 2026-05-02 19:06:42 -0300
+- Retomada operacional: 2026-06-01 19:26:17 -0300
+- Estado geral: PAUSADO_COM_VPS_PROD_E_VPS_DEV_OPERACIONAIS_E_NOTE_PARCIAL
+- Host central de ingestao/summary: `vps-assist`
 
 ## Preflight
 
 - [x] Bucket B2 privado criado.
 - [x] Chave B2 restrita ao bucket criada.
 - [x] Repositorio Restic inicializado.
-- [x] `restic check` validado.
-- [x] Telegram validado.
-- [x] Testes locais de heartbeat passando.
+- [x] `restic check` validado em 2026-06-01: 31 snapshots, sem erros.
+- [x] Telegram validado previamente com envio real.
+- [x] Testes locais de heartbeat passando previamente.
 - [x] `secure/limadev-backup-credentials.env` ignorado pelo git.
-- [x] `.env` privado validado sem imprimir segredos.
-- [x] `bash -n scripts/*.sh tests/*.sh` validado.
-- [x] `systemd-analyze verify` executado localmente; alerta esperado para unidades que referenciam `/usr/local/bin/limadev-*` antes da instalacao no host.
+- [x] `.env` privado validado sem imprimir segredos previamente.
+- [x] `bash -n scripts/*.sh tests/*.sh` validado previamente.
+- [x] `systemd-analyze verify` executado previamente; alerta esperado para unidades que referenciam `/usr/local/bin/limadev-*` antes da instalacao no host.
 
 ## Host: vps-assist
 
-- Inicio: 2026-05-02
-- Fim: 2026-05-02
 - Resultado: PASS
+- Papel: host base e central de ingestao/summary.
 - Jobs criados:
   - `vps-assist-db`
   - `vps-assist-system`
-- Snapshots:
+- Snapshots historicos validados:
   - `db`: `2ec26849`
   - `system_config`: `13dcbb23`
 - Drill:
-  - `vps-assist-db`: PASS
+  - `vps-assist-db`: PASS recorrente; evidencias semanais em `/var/log/limadev-backup`.
 - Heartbeat:
-  - modo: local
-  - status: ok
-- Timers:
+  - modo: local/central
+  - status em 2026-06-01: `ok`
+- Timers ativos:
   - `limadev-backup@vps-assist-db.timer`
   - `limadev-backup@vps-assist-system.timer`
   - `limadev-backup-drill@vps-assist-db.timer`
   - `limadev-heartbeat-report.timer`
   - `limadev-heartbeat-summary.timer`
-- Alertas:
-  - Telegram validado.
+- Ajuste feito em 2026-06-01:
+  - corrigido ownership de `/var/lib/limadev-heartbeats` e subdiretorios para `limadev-report:limadev-report`, pois o diretorio diario estava `root:root` e bloqueava ingestao remota.
 - Bloqueios:
-  - nenhum.
-- Proxima acao:
-  - usar como host central de ingestao para os demais hosts.
+  - nenhum para o papel de central atual.
 
 ## Host: vps-prod
 
-- Inicio: 2026-05-02
-- Fim: 2026-05-02
-- Resultado: BACKUP_INICIAL_OK
-- Jobs criados:
+- Resultado: PASS
+- Retomada: 2026-06-01
+- Acesso usado: Tailscale porta 22.
+- Jobs ativos:
   - `vps-prod-db`
-  - `vps-prod-system`
   - `vps-prod-app`
-- Snapshots:
-  - `db`: `3152c22f`
-  - `system_config`: `ea0ee8b1`
-  - `app_data`: `497183b7`
+  - `vps-prod-system`
+- Ajustes de job em 2026-06-01:
+  - backup timestampado dos configs anteriores em `/etc/limadev/config-backups/20260601T191932-0300`.
+  - `vps-prod-db` deixou de usar `pg_dumpall` e passou a usar `pg_dump` explicito por banco.
+  - `vps-prod-db` agora cobre:
+    - PicFound;
+    - VoxGate;
+    - Camada 30 atendimento;
+    - Zammad.
+  - `vps-prod-app` agora inclui `/opt/limadev/camada30` e volumes relevantes de Zammad:
+    - `zammad-storage`;
+    - `zammad-backup`.
+  - `vps-prod-system` agora inclui compose files da Camada 30 e Zammad.
+  - Elasticsearch, Redis e volume bruto de PostgreSQL do Zammad nao foram incluidos como app_data; o banco e coberto por dump logico e Elasticsearch/Redis sao reconstruiveis.
+- Snapshots validados em 2026-06-01:
+  - `db`: `68354de0`
+  - `app_data`: `dbf416a2`
+  - `system_config`: `ea52a0cf`
 - Drill:
-  - pendente.
+  - `vps-prod-db`: PASS em 2026-06-01 19:21:51 -0300.
+  - Relatorio no host: `/var/log/limadev-backup/drill-vps-prod-db-20260601-192114.md`.
+  - Restore temporario validou 4 arquivos.
 - Heartbeat:
-  - chave SSH restrita criada no host e autorizada no `vps-assist`.
-  - envio manual pendente.
-- Timers:
-  - pendentes de ativacao.
+  - envio manual PASS em 2026-06-01 19:23 -0300.
+  - arquivo recebido no `vps-assist`: `/var/lib/limadev-heartbeats/2026-06-01/vps-prod.json`.
+  - status: `ok`.
+- Timers ativos:
+  - `limadev-backup@vps-prod-db.timer`
+  - `limadev-backup@vps-prod-app.timer`
+  - `limadev-backup@vps-prod-system.timer`
+  - `limadev-backup-drill@vps-prod-db.timer`
+  - `limadev-heartbeat-report.timer`
 - Alertas:
-  - primeira tentativa de `db` falhou por usuario Postgres incorreto; hook corrigido e backup concluido depois.
-  - nenhum timer ativo ainda.
+  - nenhum failed unit apos ativacao.
 - Bloqueios:
-  - nenhum bloqueio operacional atual para continuar.
-- Proxima acao:
-  - rodar drill de restore de `vps-prod-db`.
-  - rodar heartbeat manual para `vps-assist`.
-  - ativar timers de backup e heartbeat apos validacao.
+  - nenhum para o escopo atual.
 
 ## Host: vps-dev
 
-- Inicio: 2026-05-02
-- Fim: 2026-05-02
-- Resultado: BACKUP_INICIAL_OK
-- Jobs criados:
-  - `vps-dev-db`
+- Resultado: PASS_PARCIAL
+- Retomada: 2026-06-01
+- Acesso usado: Tailscale porta 22.
+- Jobs operacionais ativados:
   - `vps-dev-system`
   - `vps-dev-repos`
-- Snapshots:
-  - `db`: `69b3ac14`
-  - `system_config`: `4b7305ef`
-  - `repos`: `dc16cfc2`
-- Drill:
-  - nao obrigatorio para classe high; pendente se desejado.
+- Job bloqueado/nao ativado:
+  - `vps-dev-db`
+- Motivo do bloqueio do `vps-dev-db`:
+  - o job depende do container `pix-postgres-1`, mas nao havia containers Docker rodando no `vps-dev` na retomada de 2026-06-01.
+  - para evitar falha recorrente, o timer de `vps-dev-db` nao foi ativado.
+- Snapshots validados em 2026-06-01:
+  - `system_config`: `ee84a1a5`
+  - `repos`: `3985b53b`
+- Snapshot historico ainda existente:
+  - `db`: `69b3ac14` de 2026-05-02, referente ao estado anterior do Pix dev.
 - Heartbeat:
-  - chave SSH restrita criada no host e autorizada no `vps-assist`.
-  - envio manual pendente.
-- Timers:
-  - pendentes de ativacao.
+  - envio manual PASS em 2026-06-01 19:25 -0300.
+  - arquivo recebido no `vps-assist`: `/var/lib/limadev-heartbeats/2026-06-01/vps-dev.json`.
+  - status: `ok`.
+- Timers ativos:
+  - `limadev-backup@vps-dev-system.timer`
+  - `limadev-backup@vps-dev-repos.timer`
+  - `limadev-heartbeat-report.timer`
+- Timers propositalmente nao ativos:
+  - `limadev-backup@vps-dev-db.timer`
 - Alertas:
-  - `PIX` encontrado no `vps-dev` como workload de desenvolvimento/teste (`pix-postgres-1`, `pix-redis-1`, compose em `/home/opsbot/projetos/PIX/docker-compose.yml`).
-  - `PIX` de desenvolvimento/teste foi incluido no backup geral da maquina.
-  - Pix Hub de producao esta fora do escopo Infra-LimaDev.
-  - nenhum timer ativo ainda.
-- Bloqueios:
-  - nenhum bloqueio operacional atual para continuar.
+  - nenhum failed unit apos ativacao dos timers validos.
 - Proxima acao:
-  - rodar heartbeat manual para `vps-assist`.
-  - ativar timers de backup e heartbeat apos validacao.
+  - redefinir ou revalidar o job `vps-dev-db` quando o workload PIX/dev estiver ativo ou quando ficar decidido que essa classe nao faz mais parte do escopo do `vps-dev`.
 
 ## Host: mini-pc
 
 - Resultado: BLOCKED
-- Observacoes:
-  - Acesso SSH funciona como `limadev`.
+- Estado herdado da pausa anterior:
+  - acesso SSH funciona como `limadev`.
   - `sudo -n` bloqueado; sem privilegio nao interativo para instalar stack em `/etc`, `/usr/local/bin` e systemd.
+- Status no summary de 2026-06-01:
+  - `ATENCAO` por ausencia de heartbeat.
 - Proxima acao:
   - liberar sudo nao interativo para implantacao ou executar instalacao assistida.
 
 ## Host: note-limdev
 
-- Resultado: BLOCKED
-- Observacoes:
-  - Porta `22` responde, mas as chaves locais testadas nao autenticaram para `root`, `opsbot` ou `limadev`.
-  - Porta `22022` recusou conexao.
-- Proxima acao:
-  - validar usuario/chave/porta atuais antes de nova tentativa.
+- Resultado: PASS_PARCIAL_CONTROLADO
+- Retomada inicial: 2026-06-01
+- Conclusao controlada desta etapa: 2026-06-02 01:11 -0300
+- Acesso validado:
+  - Tailscale: `100.123.108.43`.
+  - SSH: `luiz@100.123.108.43`, porta `22`.
+  - chave no `vps-dev`: `/root/.ssh/id_note_opsbot`.
+  - `sudo -n`: PASS apos criacao local de `/etc/sudoers.d/90-limadev-automation` pelo usuario `luiz`.
+  - porta `22022`: recusada; nao usar para este host no estado atual.
+- Stack instalada em 2026-06-01:
+  - `restic`, `rclone`, `curl`, `jq` instalados.
+  - scripts instalados em `/usr/local/bin/limadev-*`.
+  - units systemd instaladas em `/etc/systemd/system/limadev-*`.
+  - configs copiadas para `/etc/limadev` sem imprimir segredos.
+  - backup timestampado dos configs em `/etc/limadev/config-backups/20260601T195104-0300`.
+- Jobs criados:
+  - `note-limdev-system` (`system_config`): `/etc`, `/usr/local/bin`, `/etc/systemd/system`.
+  - `note-limdev-repos` (`repos`): `/home/luiz/Documentos/projetos`, `/home/luiz/Documentos/LimaDev`, `/home/luiz/Documentos/Obsidian`.
+  - `note-limdev-ops` (`ops_artifacts`): `/home/luiz/.hermes`, `/home/luiz/.claude`, `/home/luiz/.codex`, `/home/luiz/.gemini`, `/home/luiz/.qwen`, `/home/luiz/.agentmemory`.
+- Snapshots validados:
+  - `system_config`: `fa7f47fa`.
+  - `repos`: `e95b4ee5`.
+  - `ops_artifacts`: `94dd289a`.
+- Ajustes aplicados em 2026-06-02:
+  - `EXCLUDE_FILE="/etc/limadev/excludes/global.txt"` aplicado em `/etc/limadev/backup.env`.
+  - `DRILL_CHECK_SUBSET="1%"` registrado para reduzir janela de check em host de estacao, mas o drill systemd ainda excedeu a janela controlada.
+  - script `/usr/local/bin/limadev-backup-job.sh` atualizado para evitar falso `restic init` quando `restic snapshots` falha transitoriamente e para repetir `forget/prune` em lock temporario.
+  - script `/usr/local/bin/limadev-heartbeat-report.sh` atualizado para escolher o snapshot mais recente por timestamp no JSON do Restic.
+- Drill:
+  - tentativas via `limadev-backup-drill@note-limdev-system.service` com `restic check --read-data-subset` excederam a janela controlada e foram interrompidas com `systemctl stop`, sem processo Restic remanescente.
+  - drill manual de restore do `system_config`: PASS.
+  - relatorio: `/var/log/limadev-backup/drill-note-limdev-system-manual-20260602-010904.md`.
+  - arquivos restaurados: 1892.
+- Heartbeat:
+  - `limadev-heartbeat-report.service`: PASS.
+  - arquivo recebido no `vps-assist`: `/var/lib/limadev-heartbeats/2026-06-02/note-limdev.json`.
+- Timers ativos no `note-limdev`:
+  - `limadev-backup@note-limdev-system.timer`.
+  - `limadev-backup@note-limdev-repos.timer`.
+  - `limadev-backup@note-limdev-ops.timer`.
+  - `limadev-heartbeat-report.timer`.
+- Timer ainda nao ativado:
+  - `limadev-backup-drill@note-limdev-system.timer`, ate ajustar a estrategia de check/drill para hosts de estacao.
+- Saude do host:
+  - `systemctl is-system-running`: `running`.
+  - failed units: nenhum.
+
+## Consolidacao 2026-06-01
+
+- `restic check`: PASS, sem erros, 31 snapshots.
+- Summary do `vps-assist` gerado em `/var/log/limadev-heartbeat/daily-summary-2026-06-01.md`.
+- Status geral do summary: `ATENCAO`.
+- Hosts OK no summary:
+  - `vps-assist`
+  - `vps-prod`
+  - `vps-dev`
+- Hosts em atencao no summary:
+  - `mini-pc`
+  - `note-limdev`
+- Hosts em falha:
+  - nenhum.
+
+## Consolidacao 2026-06-02
+
+- `restic snapshots --json` no `vps-assist`: 39 snapshots.
+- Summary do `vps-assist` gerado em `/var/log/limadev-heartbeat/daily-summary-2026-06-02.md`.
+- Status geral do summary: `ATENCAO` apenas por `mini-pc`.
+- Hosts OK no summary:
+  - `vps-assist`
+  - `vps-prod`
+  - `vps-dev`
+  - `note-limdev`
+- Hosts em atencao no summary:
+  - `mini-pc`
+- Hosts em falha:
+  - nenhum.
+- Saude systemd verificada em `vps-assist`, `vps-prod`, `vps-dev` e `note-limdev`:
+  - `systemctl is-system-running`: `running`.
+  - failed units: nenhum.
+- Correcoes aplicadas e validadas:
+  - `backup_job.sh`: nao tenta `restic init` quando o repositorio ja existe mas `restic snapshots` falhou transitoriamente; retry no `forget/prune` quando ha lock temporario.
+  - `heartbeat_report.sh`: snapshot mais recente selecionado por maior timestamp no JSON do Restic.
+  - scripts atualizados em `vps-dev`, `vps-prod`, `vps-assist` e `note-limdev` com backup previo em `/etc/limadev/config-backups/`.
+- Jobs reexecutados apos correcao:
+  - `vps-prod-db`: PASS, snapshot `509cc082`.
+  - `vps-dev-repos`: PASS, snapshot `a0a880a2`.
+- Snapshots reportados no heartbeat apos correcao do parser:
+  - `vps-prod/app_data`: `1fef25ef`.
+  - `vps-prod/db`: `509cc082`.
+  - `vps-prod/system_config`: `cbbf1a75`.
+  - `vps-dev/db`: `69b3ac14`.
+  - `vps-dev/repos`: `a0a880a2`.
+  - `vps-dev/system_config`: `ee2d75b1`.
+  - `note-limdev/system_config`: `fa7f47fa`.
+  - `note-limdev/repos`: `e95b4ee5`.
+  - `note-limdev/ops_artifacts`: `94dd289a`.
+
+## Pausa operacional 2026-06-01 20:06 -0300
+
+- Motivo: pausa solicitada por Luiz para preservar estado e retomar em nova sessao.
+- Estado seguro confirmado na pausa original:
+  - `vps-prod`, `vps-dev` e `vps-assist` permaneciam conforme validacao anterior.
+  - `note-limdev` tinha acesso e sudo resolvidos, stack instalada e tres snapshots iniciais criados.
+  - nenhum timer do `note-limdev` havia sido ativado antes de drill/heartbeat.
+- Pendencias da pausa original resolvidas em 2026-06-02:
+  - `EXCLUDE_FILE="/etc/limadev/excludes/global.txt"` aplicado em `/etc/limadev/backup.env`.
+  - locks Restic verificados; `restic unlock` executado apenas apos confirmar ausencia de processos Restic ativos.
+  - heartbeat e timers de backup do `note-limdev` ativados apos validação.
+- Comando-base de acesso para retomada:
+  - `sudo ssh -i /root/.ssh/id_note_opsbot -o IdentitiesOnly=yes -p 22 luiz@100.123.108.43`.
 
 ## Retomada Recomendada
 
-1. Confirmar que a worktree contem apenas atualizacoes documentais esperadas.
-2. Rodar `restic snapshots --host vps-prod` e `restic snapshots --host vps-dev`.
-3. Rodar drill de restore de `vps-prod-db`.
-4. Rodar `systemctl start limadev-heartbeat-report.service` em `vps-prod` e `vps-dev`.
-5. Confirmar no `vps-assist` os arquivos `/var/lib/limadev-heartbeats/2026-05-02/vps-prod.json` e `vps-dev.json`.
-6. Ativar timers em `vps-prod` e `vps-dev`.
-7. Rodar resumo no `vps-assist` e validar Telegram.
-8. Atualizar status final e commitar os documentos.
+1. Liberar implantacao do `mini-pc`:
+   - sudo nao interativo; ou
+   - janela assistida para instalar stack e timers.
+2. Ajustar estrategia de drill do `note-limdev` para hosts de estacao:
+   - evitar `restic check --read-data-subset` longo dentro da janela operacional curta;
+   - manter drill manual de restore como evidencia ate fechar a politica recorrente.
+3. Decidir/revalidar `vps-dev-db`:
+   - manter no escopo se o workload PIX/dev continuar relevante; ou
+   - redefinir/remover a classe `db` do escopo do `vps-dev` se ela nao for mais necessaria.
+4. Apos `mini-pc`, rodar novo summary no `vps-assist` buscando `Status geral: OK`.
+5. Revisar custo/tamanho do repositorio apos 7 dias de operacao com os novos jobs de `vps-prod` e os novos jobs de estacao.

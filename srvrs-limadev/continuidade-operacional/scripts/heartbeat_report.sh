@@ -101,7 +101,7 @@ else
       set_status "warning"
     else
       if snapshot_json="$(restic snapshots --json --host "${job_host}" --tag "class:${job_class}" --latest 1 2>/dev/null)"; then
-        latest_snapshot="$(jq -r '.[0].short_id // .[0].id // ""' <<<"${snapshot_json}" 2>/dev/null || true)"
+        latest_snapshot="$(jq -r 'if length > 0 then (max_by(.time) | .short_id // .id // "") else "" end' <<<"${snapshot_json}" 2>/dev/null || true)"
         if [[ -n "${latest_snapshot}" ]]; then
           job_status="ok"
           job_message="latest snapshot found"

@@ -19,27 +19,29 @@ Criar um produto interno de continuidade operacional com:
 - restauracao validada para arquivo, servico e host completo;
 - reconstruicao de maquina do zero com bootstrap automatizado.
 
-## 2.1 Status de implantacao - 2026-05-02
+## 2.1 Status de implantacao - 2026-06-02
 
-Base operacional validada no `vps-assist`:
+Base operacional validada e expandida:
 
 - bucket remoto privado `limadev-backup` criado no Backblaze B2;
 - chave de aplicacao restrita ao bucket criada para uso Restic/S3;
-- repositorio Restic inicializado;
-- `restic check` executado com sucesso;
-- snapshot `db` criado: `2ec26849`;
-- snapshot `system_config` criado: `13dcbb23`;
-- drill de restore do `db` executado com resultado PASS;
-- timers de backup, drill e heartbeat ativados no `vps-assist`;
-- Telegram validado com envio real;
-- heartbeat do `vps-assist` em `ok`.
+- repositorio Restic inicializado; `restic snapshots --json` no `vps-assist` retornou 39 snapshots em 2026-06-02;
+- `vps-assist` operacional como host central de ingestao/summary, com backups, drill DB e heartbeat ativos;
+- `vps-prod` operacional com backups de `db`, `app_data`, `system_config`, drill DB e heartbeat ativos;
+- `vps-prod-db` cobre PicFound, VoxGate, Camada 30 atendimento e Zammad via dumps logicos;
+- `vps-prod-app` cobre `/opt/limadev/camada30` e volumes relevantes de Zammad (`zammad-storage` e `zammad-backup`);
+- `vps-dev` reporta OK no heartbeat com snapshots para `db`, `repos` e `system_config`; ainda resta fechar decisao de escopo do DB conforme workload PIX/dev;
+- `note-limdev` desbloqueado para implantacao: acesso validado como `luiz@100.123.108.43:22` com chave `/root/.ssh/id_note_opsbot`, `sudo -n` habilitado, stack instalada e snapshots iniciais de `system_config`, `repos` e `ops_artifacts` criados;
+- `note-limdev` teve `EXCLUDE_FILE` aplicado, drill manual de restore `system_config` validado, heartbeat recebido no `vps-assist` e timers de backup/heartbeat ativos;
+- scripts `backup_job.sh` e `heartbeat_report.sh` foram endurecidos contra falsos negativos de repositorio Restic, lock temporario no `forget/prune` e selecao incorreta do snapshot mais recente;
+- Telegram/summary diario permanecem ativos no `vps-assist`;
+- heartbeat de 2026-06-02: `vps-assist`, `vps-prod`, `vps-dev` e `note-limdev` em `ok`; `mini-pc` em atencao.
 
 Pendencias de v1:
 
-- implantar `vps-prod`;
-- implantar `vps-dev`;
+- decidir/revalidar `vps-dev-db` conforme estado atual do workload PIX/dev;
 - implantar `mini-pc`;
-- implantar `note-limdev`;
+- ajustar a estrategia do drill systemd do `note-limdev` para hosts de estacao antes de ativar o timer de drill desse host;
 - executar drill de falha simulada apos todos os hosts reportarem;
 - rotacionar/revogar chave ampla usada no bootstrap e manter somente chave restrita.
 
@@ -100,14 +102,19 @@ Pendencias de v1:
 ### Onda 1
 
 - [x] implantar jobs criticos em `vps-assist`;
-- [ ] implantar jobs criticos em `vps-prod`;
+- [x] implantar jobs criticos em `vps-prod`;
 - [x] ativar notificacao Telegram;
-- [x] validar restore de servico critico no `vps-assist`.
+- [x] validar restore de servico critico no `vps-assist`;
+- [x] validar restore critico de `vps-prod-db`.
 
 ### Onda 2
 
 - [ ] expandir para as 5 maquinas e todas as classes de dados prioritarias;
-- [x] consolidar evidencia recorrente inicial no `vps-assist`.
+- [x] consolidar evidencia recorrente inicial no `vps-assist`;
+- [x] ativar `vps-dev` para `repos`, `system_config` e heartbeat;
+- [x] concluir `note-limdev`: ajuste de excludes, drill manual de restore, heartbeat e timers de backup/heartbeat;
+- [ ] ajustar/ativar timer de drill do `note-limdev` para hosts de estacao;
+- [ ] decidir/revalidar `vps-dev-db` conforme estado do workload PIX/dev.
 
 ### Onda 3
 
