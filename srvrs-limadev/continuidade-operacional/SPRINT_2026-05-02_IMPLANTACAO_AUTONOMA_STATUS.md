@@ -289,10 +289,38 @@
 - Comando-base de acesso para retomada:
   - `sudo ssh -i /root/.ssh/id_note_opsbot -o IdentitiesOnly=yes -p 22 luiz@100.123.108.43`.
 
+## Finalizacao de configuracao 2026-06-02
+
+- Correcao de classificacao:
+  - `mini-pc` e servidor e pode seguir a estrategia recorrente dos demais hosts.
+  - `note-limdev` e a unica estacao de trabalho no escopo atual.
+- Multica no `vps-assist`:
+  - issue criada: `LIM-40` (`c299043a-a522-4f3f-a094-0f800a8496ef`).
+  - titulo: `Review: drill controlado do note-limdev sob autorizacao de janela`.
+  - status: `in_review`.
+  - prioridade: `medium`.
+  - sem assignee e sem runs (`RUN_COUNT=0`), para nao iniciar processo automatico.
+  - regra: nao executar `restic check --read-data-subset`, restore amplo, backup manual ou drill amplo de `ops_artifacts` sem autorizacao explicita de Luiz.
+- `mini-pc`:
+  - locks Restic obsoletos removidos (`restic unlock`: 2 locks).
+  - jobs `mini-pc-system`, `mini-pc-repos` e `mini-pc-ops` reexecutados sequencialmente com sucesso.
+  - timer recorrente `limadev-backup-drill@mini-pc-system.timer` ativado.
+  - proxima janela observada: `2026-06-07 03:34:54 UTC`.
+  - `systemctl is-system-running`: `running`.
+- Robustez do script:
+  - `backup_job.sh` passou a tratar lock de `forget/prune` como aviso quando o snapshot ja foi criado, evitando falha falsa de backup por manutencao concorrente no repositorio compartilhado.
+  - script atualizado em `vps-dev`, `vps-assist`, `vps-prod`, `mini-pc` e `note-limdev`, com backup local do binario anterior.
+- Heartbeat/summary revalidados:
+  - heartbeats manuais leves enviados por `vps-assist`, `vps-prod`, `vps-dev`, `mini-pc` e `note-limdev`.
+  - summary `/var/log/limadev-heartbeat/daily-summary-2026-06-02.md`: `Status geral: OK`.
+  - hosts OK: `vps-assist`, `vps-prod`, `vps-dev`, `mini-pc`, `note-limdev`.
+  - failed units nos heartbeats: `0` em todos os 5 hosts.
+- Restic no `vps-assist`:
+  - `restic snapshots --json`: 53 snapshots.
+  - `mini-pc`: 6 snapshots, ultimo em `2026-06-02T13:48:44.747498607Z`.
+
 ## Retomada Recomendada
 
-1. Ajustar estrategia de drill recorrente para hosts de estacao (`mini-pc` e `note-limdev`):
-   - evitar `restic check --read-data-subset` longo dentro da janela operacional curta;
-   - manter drill manual de restore como evidencia ate fechar a politica recorrente.
+1. Aguardar Luiz autorizar a janela da issue Multica `LIM-40` para drill leve/amostral do `note-limdev`.
 2. Revisar custo/tamanho do repositorio apos 7 dias de operacao com os novos jobs de `vps-prod`, `mini-pc` e `note-limdev`.
-3. Manter monitoramento do summary diario no `vps-assist`; estado buscado nesta etapa foi alcancado com `Status geral: OK`.
+3. Manter monitoramento do summary diario no `vps-assist`; estado buscado nesta etapa permanece `Status geral: OK`.

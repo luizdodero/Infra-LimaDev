@@ -25,23 +25,24 @@ Base operacional validada e expandida:
 
 - bucket remoto privado `limadev-backup` criado no Backblaze B2;
 - chave de aplicacao restrita ao bucket criada para uso Restic/S3;
-- repositorio Restic inicializado; `restic snapshots --json` no `vps-assist` retornou 42 snapshots em 2026-06-02;
+- repositorio Restic inicializado; `restic snapshots --json` no `vps-assist` retornou 53 snapshots em 2026-06-02 apos revalidacao;
 - `vps-assist` operacional como host central de ingestao/summary, com backups, drill DB e heartbeat ativos;
 - `vps-prod` operacional com backups de `db`, `app_data`, `system_config`, drill DB e heartbeat ativos;
 - `vps-prod-db` cobre PicFound, VoxGate, Camada 30 atendimento e Zammad via dumps logicos;
 - `vps-prod-app` cobre `/opt/limadev/camada30` e volumes relevantes de Zammad (`zammad-storage` e `zammad-backup`);
 - `vps-dev` reporta OK no heartbeat com backups ativos de `repos` e `system_config`; a classe `db` local foi retirada do escopo operacional porque serve apenas a testes locais no VPS;
 - `mini-pc` desbloqueado para implantacao: acesso validado como `limadev@100.87.104.42:22022` com chave `/root/.ssh/id_mini_pc_limalab`, `sudo -n` habilitado, stack instalada e snapshots iniciais de `system_config`, `repos` e `ops_artifacts` criados;
-- `mini-pc` teve exclude aplicado, drill manual de restore `system_config` validado, heartbeat recebido no `vps-assist` e timers de backup/heartbeat ativos;
+- `mini-pc` e tratado como servidor; teve exclude aplicado, drill manual de restore `system_config` validado, heartbeat recebido no `vps-assist`, timers de backup/heartbeat ativos e timer recorrente de drill `mini-pc-system` ativado;
 - `note-limdev` desbloqueado para implantacao: acesso validado como `luiz@100.123.108.43:22` com chave `/root/.ssh/id_note_opsbot`, `sudo -n` habilitado, stack instalada e snapshots iniciais de `system_config`, `repos` e `ops_artifacts` criados;
 - `note-limdev` teve `EXCLUDE_FILE` aplicado, drill manual de restore `system_config` validado, heartbeat recebido no `vps-assist` e timers de backup/heartbeat ativos;
-- scripts `backup_job.sh` e `heartbeat_report.sh` foram endurecidos contra falsos negativos de repositorio Restic, lock temporario no `forget/prune` e selecao incorreta do snapshot mais recente;
+- scripts `backup_job.sh` e `heartbeat_report.sh` foram endurecidos contra falsos negativos de repositorio Restic, lock temporario no `forget/prune` e selecao incorreta do snapshot mais recente; quando o snapshot ja foi criado, lock no `forget/prune` passa a ser aviso operacional em vez de falha do backup;
+- `note-limdev` e a unica estacao de trabalho no escopo atual; drill pesado/restore amplo ficou sob autorizacao explicita em Multica `LIM-40`, status `in_review`, prioridade `medium`, sem execucao automatica;
 - Telegram/summary diario permanecem ativos no `vps-assist`;
 - heartbeat de 2026-06-02: `vps-assist`, `vps-prod`, `vps-dev`, `mini-pc` e `note-limdev` em `ok`; `Status geral: OK`.
 
 Pendencias de v1:
 
-- ajustar a estrategia do drill systemd dos hosts de estacao (`mini-pc` e `note-limdev`) antes de ativar timers de drill recorrente nesses hosts;
+- aguardar autorizacao de janela no Multica `LIM-40` para drill leve/amostral do `note-limdev`;
 - executar drill de falha simulada apos todos os hosts reportarem;
 - rotacionar/revogar chave ampla usada no bootstrap e manter somente chave restrita.
 
@@ -109,11 +110,12 @@ Pendencias de v1:
 
 ### Onda 2
 
-- [ ] expandir para as 5 maquinas e todas as classes de dados prioritarias;
+- [x] expandir para as 5 maquinas e todas as classes de dados prioritarias;
 - [x] consolidar evidencia recorrente inicial no `vps-assist`;
 - [x] ativar `vps-dev` para `repos`, `system_config` e heartbeat;
 - [x] concluir `note-limdev`: ajuste de excludes, drill manual de restore, heartbeat e timers de backup/heartbeat;
-- [ ] ajustar/ativar timer de drill do `note-limdev` para hosts de estacao;
+- [x] ativar timer recorrente de drill do `mini-pc` como servidor;
+- [ ] executar drill leve/amostral do `note-limdev` somente apos autorizacao de janela no Multica `LIM-40`;
 - [x] retirar `vps-dev-db` do escopo operacional; banco local do VPS e apenas ambiente de teste local.
 
 ### Onda 3

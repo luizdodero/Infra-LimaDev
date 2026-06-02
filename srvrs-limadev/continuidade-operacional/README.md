@@ -5,12 +5,12 @@ Implementacao inicial do plano de backup e recuperacao para a infraestrutura Lim
 ## Status atual - 2026-06-02
 
 - Backend remoto: Backblaze B2, bucket privado `limadev-backup`.
-- Repositorio Restic: inicializado; `restic snapshots --json` no `vps-assist` retornou 42 snapshots em 2026-06-02.
+- Repositorio Restic: inicializado; `restic snapshots --json` no `vps-assist` retornou 53 snapshots em 2026-06-02 apos revalidacao.
 - Hosts operacionais:
   - `vps-assist`: PASS, host central de ingestao/summary.
   - `vps-prod`: PASS, com backups de DB/app/system, drill de DB e heartbeat ativos.
   - `vps-dev`: PASS, com backups de `repos`/`system_config` e heartbeat reportando OK; `db` local ficou fora do escopo operacional por ser apenas ambiente de teste local.
-  - `mini-pc`: PASS, com backups `system_config`, `repos` e `ops_artifacts`, heartbeat e timers de backup ativos; drill manual de restore do `system_config` validado.
+  - `mini-pc`: PASS, tratado como servidor; backups `system_config`, `repos` e `ops_artifacts`, heartbeat, timers de backup e timer recorrente de drill `mini-pc-system` ativos.
   - `note-limdev`: PASS parcial controlado, com backups `system_config`, `repos` e `ops_artifacts`, heartbeat e timers de backup ativos; drill manual de restore do `system_config` validado.
 - Hosts pendentes/bloqueados:
   - nenhum no escopo atual.
@@ -41,10 +41,12 @@ Implementacao inicial do plano de backup e recuperacao para a infraestrutura Lim
   - `vps-prod`: `limadev-backup@vps-prod-db.timer`, `limadev-backup@vps-prod-app.timer`, `limadev-backup@vps-prod-system.timer`, `limadev-backup-drill@vps-prod-db.timer`, `limadev-heartbeat-report.timer`.
   - `vps-dev`: `limadev-backup@vps-dev-repos.timer`, `limadev-backup@vps-dev-system.timer`, `limadev-heartbeat-report.timer`.
   - `mini-pc`: `limadev-backup@mini-pc-system.timer`, `limadev-backup@mini-pc-repos.timer`, `limadev-backup@mini-pc-ops.timer`, `limadev-heartbeat-report.timer`.
+  - `mini-pc` drill recorrente: `limadev-backup-drill@mini-pc-system.timer` ativo; proxima janela observada em `2026-06-07 03:34:54 UTC`.
   - `note-limdev`: `limadev-backup@note-limdev-system.timer`, `limadev-backup@note-limdev-repos.timer`, `limadev-backup@note-limdev-ops.timer`, `limadev-heartbeat-report.timer`.
 - Observacao operacional:
   - o snapshot historico `vps-dev/db` (`69b3ac14`) permanece no repositorio Restic como evidencia antiga, mas nao faz parte dos jobs/timers ativos.
-  - os drills systemd recorrentes de hosts de estacao ainda nao foram ativados; `mini-pc` e `note-limdev` usam evidencia inicial por drill manual de restore ate ajustar estrategia de check para janelas curtas.
+  - `note-limdev` e a unica estacao de trabalho no escopo atual; drill pesado/restore amplo ficou sob autorizacao explicita em Multica `LIM-40`, status `in_review`, prioridade `medium`.
+  - `backup_job.sh` foi ajustado para tratar lock de `forget/prune` como aviso quando o snapshot ja foi criado, evitando marcar backup bem-sucedido como falha por manutencao concorrente do repositorio.
 
 ## Escopo
 

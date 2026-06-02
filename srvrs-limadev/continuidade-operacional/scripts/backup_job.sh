@@ -232,7 +232,14 @@ if [[ "${DRY_RUN}" == "0" ]]; then
     break
   done
 
-  [[ "${forget_ok}" == "1" ]] || fatal "restic forget/prune failed"
+  if [[ "${forget_ok}" != "1" ]]; then
+    if grep -qi 'repository is already locked\|unable to create lock' <<<"${forget_output}"; then
+      log "WARN: restic forget/prune skipped after retries because repository is locked; backup snapshot was already created"
+      notify_telegram "[BACKUP][WARN] host=${HOST} class=${CLASS} reason=forget_prune_locked_snapshot_created"
+    else
+      fatal "restic forget/prune failed"
+    fi
+  fi
 fi
 
 run_hook "${POST_BACKUP_HOOK:-}" "POST_BACKUP_HOOK"
